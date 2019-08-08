@@ -19,7 +19,7 @@ Host vultr
 	IdentityFile ~/.ssh/id_rsa_vultr
 
 Host gcp
-	HostName 104.224.191.118
+	HostName 34.80.117.7
 	User root
-	Port 27850
+	Port 22
 	IdentityFile ~/.ssh/id_rsa_gcp
