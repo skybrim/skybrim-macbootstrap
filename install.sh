@@ -16,8 +16,6 @@ else
     echo "You are in toutiao network, no need to use ss now"
 fi
 
-brew tap caskroom/cask
-
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
     defaults delete com.googlecode.iterm2
