@@ -20,46 +20,86 @@ brew cask install the-unarchiver
 
 # Install Charles
 if [[ -e /Applications/Charles.app ]]; then
-    echo "You have installed Charles"
+    echo "You have installed charles"
 else
-    if [[ ! -e $HOME/Downloads/Charles.app.zip ]]; then
-        curl "http://p2w4johvr.bkt.clouddn.com/Charles.app.zip" -o ~/Downloads/Charles.app.zip
-    fi
-
-    unzip -q $HOME/Downloads/Charles.app.zip -d /Applications
-    rm $HOME/Downloads/Charles.app.zip
+    brew cask install charles
 fi
 
-# Install Dash
-if [[ -e /Applications/Dash.app ]]; then
-    echo "You have installed Dash"
+# Dash 文档
+if [[ ! -e /Applications/Dash.app ]]; then
+    brew cask install dash
 else
-    if [[ ! -e $HOME/Downloads/Dash.app.zip ]]; then
-        curl "http://p2w4johvr.bkt.clouddn.com/Dash.app.zip" -o ~/Downloads/Dash.app.zip
-    fi
-
-    unzip -q $HOME/Downloads/Dash.app.zip -d /Applications
-    rm $HOME/Downloads/Dash.app.zip
+    echo "You have installed dash"
 fi
 
-# Install Alfred
-if [[ -e "/Applications/Alfred 3.app" ]]; then
-    echo "You have installed Alfred"
-else
-    if [[ ! -e "$HOME/Library/Application Support/Alfred 3" ]]; then
-        mkdir -p "$HOME/Library/Application Support/Alfred 3"
-    fi
-
-    # patch alfred
+# alfred 管家工具
+if [[ ! -e /Applications/alfred 4.app ]]; then
     brew cask install alfred
-    sudo codesign -f -d -s - "/Applications/Alfred 3.app/Contents/Frameworks/Alfred Framework.framework/Versions/A/Alfred Framework"
-    cp tools/alfred.license.plist "$HOME/Library/Application Support/Alfred 3/license.plist"
+else
+    echo "You have installed alfred 4"
+fi
 
-    # sync configuration
-    rm -rf "$HOME/Library/Application Support/Alfred 3/Alfred.alfredpreferences"
-    curl http://p2w4johvr.bkt.clouddn.com/Alfred.alfredpreferences2.zip -o "$HOME/Downloads/Alfred.alfredpreferences.zip"
-    unzip -q "$HOME/Downloads/Alfred.alfredpreferences.zip" -d "$HOME/Library/Application Support/Alfred 3"
-    rm "$HOME/Downloads/Alfred.alfredpreferences.zip"
+# iina 播放器
+if [[ ! -e /Applications/iina.app ]]; then
+    brew cask install iina
+else
+    echo "You have installed iina"
+fi
+
+# ticktick 滴答清单
+if [[ ! -e /Applications/ticktick.app ]]; then
+    brew cask install ticktick
+else
+    echo "You have installed ticktick"
+fi
+
+# Fliqlo 屏保
+if [[ ! -e /Applications/Fliqlo.app ]]; then
+    brew cask install fliqlo
+else
+    echo "You have installed fliqlo"
+fi
+
+# spectacle 分屏工具
+if [[ ! -e /Applications/spectacle.app ]]; then
+    brew cask install spectacle
+else
+    echo "You have installed spectacle"
+fi
+
+# stretchly 定时休息提醒
+if [[ ! -e /Applications/stretchly.app ]]; then
+    brew cask install stretchly
+else
+    echo "You have installed stretchly"
+fi
+
+# calibre 电子书工具
+if [[ ! -e /Applications/calibre.app ]]; then
+    brew cask install calibre
+else
+    echo "You have installed calibre"
+fi
+
+# pusher 推送测试工具
+if [[ ! -e /Applications/pusher.app ]]; then
+    brew cask install pusher
+else
+    echo "You have installed pusher"
+fi
+
+# balenaetcher 烧录工具
+if [[ ! -e /Applications/balenaetcher.app ]]; then
+    brew cask install balenaetcher
+else
+    echo "You have installed balenaetcher"
+fi
+
+# picgo 上传图片
+if [[ ! -e /Applications/picgo.app ]]; then
+    brew cask install picgo
+else
+    echo "You have installed picgo"
 fi
 
 ##################################################
