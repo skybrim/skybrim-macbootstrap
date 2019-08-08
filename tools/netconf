@@ -1,8 +1,8 @@
 {
-    "server":"172.96.215.73",
-    "server_port":443,
-    "local_port":14179,
-    "password":"12345678",
+    "server":"34.80.117.7",
+    "server_port":36946,
+    "local_port":10009,
+    "password":"twlsvpnpassword",
     "timeout":600,
-    "method":"aes-256-cfb"
+    "method":"aes-128-gcm"
 }

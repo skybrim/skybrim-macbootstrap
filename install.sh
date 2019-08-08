@@ -9,7 +9,7 @@ pip3 install shadowsocks
 # install and use shadowsocks
 if not_tt_network; then
     nohup sslocal -q -c ~/.macbootstrap/tools/netconf &> /private/tmp/nohup.out&
-    export ALL_PROXY=socks5://127.0.0.1:14179
+    export ALL_PROXY=socks5://127.0.0.1:10009
 else
     echo "You are in toutiao network, no need to use ss now"
 fi
