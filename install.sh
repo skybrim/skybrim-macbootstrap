@@ -38,6 +38,83 @@ else
     echo "You have installed WeChat"
 fi
 
+
+if [[ ! -e /Applications/qq.app ]]; then
+    brew cask install qq
+else
+    echo "You have installed qq"
+fi
+
+# alfred 管家工具
+if [[ ! -e /Applications/alfred 4.app ]]; then
+    brew cask install alfred
+else
+    echo "You have installed alfred 4"
+fi
+
+# iina 播放器
+if [[ ! -e /Applications/iina.app ]]; then
+    brew cask install iina
+else
+    echo "You have installed iina"
+fi
+
+# ticktick 滴答清单
+if [[ ! -e /Applications/ticktick.app ]]; then
+    brew cask install ticktick
+else
+    echo "You have installed ticktick"
+fi
+
+# Fliqlo 屏保
+if [[ ! -e /Applications/Fliqlo.app ]]; then
+    brew cask install Fliqlo
+else
+    echo "You have installed Fliqlo"
+fi
+
+# spectacle 分屏工具
+if [[ ! -e /Applications/spectacle.app ]]; then
+    brew cask install spectacle
+else
+    echo "You have installed spectacle"
+fi
+
+# stretchly 定时休息提醒
+if [[ ! -e /Applications/stretchly.app ]]; then
+    brew cask install stretchly
+else
+    echo "You have installed stretchly"
+fi
+
+# calibre 电子书工具
+if [[ ! -e /Applications/calibre.app ]]; then
+    brew cask install calibre
+else
+    echo "You have installed calibre"
+fi
+
+# pusher 推送测试工具
+if [[ ! -e /Applications/pusher.app ]]; then
+    brew cask install pusher
+else
+    echo "You have installed pusher"
+fi
+
+# balenaetcher 烧录工具
+if [[ ! -e /Applications/balenaetcher.app ]]; then
+    brew cask install balenaetcher
+else
+    echo "You have installed balenaetcher"
+fi
+
+# picgo 上传图片
+if [[ ! -e /Applications/picgo.app ]]; then
+    brew cask install picgo
+else
+    echo "You have installed picgo"
+fi
+
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     brew cask install google-chrome
 
@@ -99,6 +176,7 @@ brew_install nvim
 brew_install exiftool
 brew_install archey
 brew_install ranger
+brew_install tree
 brew_install git-lfs && git lfs install
 $(brew --prefix)/opt/fzf/install --all
 
@@ -116,12 +194,14 @@ fi
 backup_file ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+cd && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 
 # vim configuration
 backup_file ~/.vim
 backup_file ~/.config/nvim/
-git clone https://github.com/bestswifter/vim-config.git ~/.config/nvim
+git clone https://github.com/skybrim/vim-config.git ~/.config/nvim
 ln -s ~/.config/nvim ~/.vim
 
 # ESLint configuration
