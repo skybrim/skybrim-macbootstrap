@@ -15,6 +15,9 @@ if [[ ! -e /usr/local/bin/brew ]]; then
 
     cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
     git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+    
+    cd "$(brew --repo)/Library/Taps/homebrew/homebrew-cask"
+    git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
 
     export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 else
