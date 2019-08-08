@@ -14,10 +14,10 @@ if [[ "$username" == $(whoami) ]]; then
     fi
 
     # GPG_KEY
-    GPG_KEY="$HOME/.macbootstrap/git-config/bestswifter.asc"
-    gpg --import "$GPG_KEY"
-    shred --remove "$GPG_KEY"
-    git config --global user.signingkey 368B0D29D38D4B4EEE5BF51EB2468CF4358BF1CF
-    git config --global commit.gpgsign true
+    # GPG_KEY="$HOME/.macbootstrap/git-config/bestswifter.asc"
+    # gpg --import "$GPG_KEY"
+    # shred --remove "$GPG_KEY"
+    # git config --global user.signingkey 368B0D29D38D4B4EEE5BF51EB2468CF4358BF1CF
+    # git config --global commit.gpgsign true
 
 fi
