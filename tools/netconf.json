@@ -2,9 +2,9 @@
     "server":"34.80.117.7",
     "server_port":36946,
     "local_address": "127.0.0.1",
-    "local_port":14179,
+    "local_port":10009,
     "password":"twlsvpnpassword",
     "timeout":600,
-    "method":"aes-128-gcm",
+    "method":"aes-256-cfb",
     "fast_open": false
 }
