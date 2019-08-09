@@ -143,7 +143,7 @@ export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 nvm install 9.11.0
-./install-steps/node_global.sh
+~/.macbootstrap/install-steps/node_global.sh
 
 # hook login
-./install-steps/hook_login.sh
+~/.macbootstrap/install-steps/hook_login.sh
