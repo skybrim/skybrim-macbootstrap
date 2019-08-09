@@ -126,6 +126,7 @@ rm -rf fonts
 
 # Python
 # ---------------
+unset ALL_PROXY
 pip3 install --trusted-host pypi.python.org neovim jedi ipython
 pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
 
