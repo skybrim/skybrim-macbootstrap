@@ -195,7 +195,7 @@ function bsfn () {
 }
 
 function bssclient () {
-    nohup sslocal -q -c ~/.macbootstrap/config/shadowsocks.conf &> $BSTEMP/nohup.out&
+    nohup sslocal -q -c ~/.macbootstrap/tools/netconf.json &> $BSTEMP/nohup.out&
 }
 
 function c() {
