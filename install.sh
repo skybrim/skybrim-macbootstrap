@@ -149,11 +149,11 @@ backup_file "$old_rc_conf"
 ln -s ~/.macbootstrap/config/ranger/commands.py "$old_commands_py"
 ln -s ~/.macbootstrap/config/ranger/rc.conf "$old_rc_conf"
 
-./install-steps/dependencies.before.sh
+~/.macbootstrap/install-steps/dependencies.before.sh
 
 unset ALL_PROXY
-./install-steps/dependencies.after.sh
-./install-steps/sogou_sync.sh
+~/.macbootstrap/install-steps/dependencies.after.sh
+~/.macbootstrap/install-steps/sogou_sync.sh
 
 # ssh configuration
 backup_file ~/.ssh/config
@@ -163,6 +163,6 @@ fi
 ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 
 # Personal
-./install-steps/personal.sh
-./personal.sh
+~/.macbootstrap/install-steps/personal.sh
+~/.macbootstrap/personal.sh
 
