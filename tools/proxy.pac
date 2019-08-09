@@ -1,4 +1,4 @@
-var PROXY = "SOCKS5 127.0.0.1:10009; SOCKS 127.0.0.1:10009; DIRECT;";
+var PROXY = "SOCKS5 127.0.0.1:14179; SOCKS 127.0.0.1:14179; DIRECT;";
 
 var domains = [
 	"vpngate.net",
