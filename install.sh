@@ -7,21 +7,19 @@ brew install python3
 pip3 install shadowsocks
 
 # install and use shadowsocks
-# if not_tt_network; then
-#     nohup sslocal -q -c ~/.macbootstrap/tools/netconf &> /private/tmp/nohup.out&
-#     export ALL_PROXY=socks5://127.0.0.1:14179
-#     # 复制 PAC 文件
-#     ln -s ~/.macbootstrap/tools/proxy.pac ~/proxy.pac
-# else
-#     echo "You are in toutiao network, no need to use ss now"
-# fi
+if not_tt_network; then
+    nohup sslocal -q -c ~/.macbootstrap/tools/netconf &> /private/tmp/nohup.out&
+    export ALL_PROXY=socks5://127.0.0.1:14179
+else
+    echo "You are in toutiao network, no need to use ss now"
+fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
     defaults delete com.googlecode.iterm2
     cp config/com.googlecode.iterm2.plist $HOME/Library/Preferences
     # config background image location
-    command="set :New\ Bookmarks:0:Background\ Image\ Location /Users/""$(whoami)""/.macbootstrap/assets/iterm-background.jpg"
+    # command="set :New\ Bookmarks:0:Background\ Image\ Location /Users/""$(whoami)""/.macbootstrap/assets/iterm-background.jpg"
     /usr/libexec/PlistBuddy -c "$command" $HOME/Library/Preferences/com.googlecode.iterm2.plist
     defaults read -app iTerm >/dev/null
 else
