@@ -150,9 +150,9 @@ ln -s ~/.macbootstrap/config/ranger/commands.py "$old_commands_py"
 ln -s ~/.macbootstrap/config/ranger/rc.conf "$old_rc_conf"
 
 ~/.macbootstrap/install-steps/dependencies.before.sh
+~/.macbootstrap/install-steps/dependencies.after.sh
 
 unset ALL_PROXY
-~/.macbootstrap/install-steps/dependencies.after.sh
 ~/.macbootstrap/install-steps/sogou_sync.sh
 
 # ssh configuration

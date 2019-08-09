@@ -1,4 +1,4 @@
-source basic.sh
+source $HOME/.macbootstrap/basic.sh
 
 # Homebrew
 # ---------------

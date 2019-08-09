@@ -260,5 +260,5 @@
     // Comment
     "better-comments.multilineComments": true,
     "workbench.startupEditor": "newUntitledFile",
-    "dart.flutterSdkPath": "/Users/zxy/dev/code/flutter"
+    // "dart.flutterSdkPath": "/Users/zxy/dev/code/flutter"
 }
