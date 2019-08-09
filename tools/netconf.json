@@ -1,8 +1,10 @@
 {
     "server":"34.80.117.7",
     "server_port":36946,
+    "local_address": "127.0.0.1",
     "local_port":14179,
     "password":"twlsvpnpassword",
     "timeout":600,
-    "method":"aes-128-gcm"
+    "method":"aes-128-gcm",
+    "fast_open": false
 }
