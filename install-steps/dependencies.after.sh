@@ -33,7 +33,7 @@ else
 fi
 
 # alfred 管家工具
-if [[ ! -e /Applications/alfred 4.app ]]; then
+if [[ ! -e /Applications/alfred\ 4.app ]]; then
     brew cask install alfred
 else
     echo "You have installed alfred 4"
