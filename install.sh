@@ -9,19 +9,20 @@ pip3 install shadowsocks
 # install and use shadowsocks
 if not_tt_network; then
     nohup sslocal -q -c ~/.macbootstrap/tools/netconf.json &> /private/tmp/nohup.out&
-    export ALL_PROXY=socks5://127.0.0.1:10009
+    export ALL_PROXY=socks5://127.0.0.1:10009  /Library/WebServer/Documents
+    ln -s ~/.macbootstrap/tools/ss.pac /Library/WebServer/Documents/ss.pac
 else
     echo "You are in toutiao network, no need to use ss now"
 fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
-    defaults delete com.googlecode.iterm2
-    cp ~/.macbootstrap/config/com.googlecode.iterm2.plist $HOME/Library/Preferences
-    # config background image location
-    # command="set :New\ Bookmarks:0:Background\ Image\ Location /Users/""$(whoami)""/.macbootstrap/assets/iterm-background.jpg"
-    /usr/libexec/PlistBuddy -c "$command" $HOME/Library/Preferences/com.googlecode.iterm2.plist
-    defaults read -app iTerm >/dev/null
+    # defaults delete com.googlecode.iterm2
+    # cp ~/.macbootstrap/config/com.googlecode.iterm2.plist $HOME/Library/Preferences
+    # # config background image location
+    # # command="set :New\ Bookmarks:0:Background\ Image\ Location /Users/""$(whoami)""/.macbootstrap/assets/iterm-background.jpg"
+    # /usr/libexec/PlistBuddy -c "$command" $HOME/Library/Preferences/com.googlecode.iterm2.plist
+    # defaults read -app iTerm >/dev/null
 else
     echo "You have installed iTerm2"
 fi
