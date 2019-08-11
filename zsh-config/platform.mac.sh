@@ -196,6 +196,12 @@ function bsfn () {
 
 function bssclient () {
     nohup sslocal -q -c ~/.macbootstrap/tools/netconf.json &> $BSTEMP/nohup.out&
+    # 开启 apache
+    udo apachectl start
+    # 开启自动代理配置
+    networksetup -setautoproxystate 'Wi-Fi' on
+    # 设置 pac 文件地址
+    networksetup -setautoproxyurl 'Wi-Fi' 'http://127.0.0.1/ss.pac'
 }
 
 function c() {
