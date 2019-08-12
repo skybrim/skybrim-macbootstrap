@@ -47,7 +47,7 @@ fi
 
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     brew cask install google-chrome
-
+    
     # Set Chrome as default browser
     git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
     (cd ./tools/defaultbrowser && make && make install)
@@ -102,7 +102,7 @@ brew_install scmpuff
 brew_install fzf
 brew_install fd
 brew_install the_silver_searcher
-brew_install nvim
+brew install vim --with-override-system-vi
 brew_install exiftool
 brew_install archey
 brew_install ranger
@@ -124,14 +124,12 @@ fi
 backup_file ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 chsh -s /bin/zsh
 
 # vim configuration
-backup_file ~/.vim
-backup_file ~/.config/nvim/
-git clone https://github.com/skybrim/vim-config.git ~/.config/nvim
-ln -s ~/.config/nvim ~/.vim
+ln -s ~/.config/vimrc ~/.vimrc
 
 # ESLint configuration
 backup_file ~/.eslintrc.js

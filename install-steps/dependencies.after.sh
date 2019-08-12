@@ -111,18 +111,8 @@ fi
 ##################################################
 brew cask install proxifier
 open /Applications/Proxifier.app
-
 defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
 defaults write com.initex.proxifier.macosx.plist LicenseKey -string "P427L-9Y552-5433E-8DSR3-58Z68"
-bs_cp config/bs_aotu_fq.ppx "$HOME/Library/Application Support/Proxifier/Profiles/"
-
-# Powerline-font
-# ---------------
-git clone --depth=1 https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
 
 # Python
 # ---------------
