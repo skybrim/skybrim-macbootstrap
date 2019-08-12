@@ -147,20 +147,14 @@ backup_file "$old_rc_conf"
 ln -s ~/.macbootstrap/config/ranger/commands.py "$old_commands_py"
 ln -s ~/.macbootstrap/config/ranger/rc.conf "$old_rc_conf"
 
+# install-steps
 ~/.macbootstrap/install-steps/dependencies.before.sh
 ~/.macbootstrap/install-steps/dependencies.after.sh
 
+# 取消代理
 unset ALL_PROXY
 ~/.macbootstrap/install-steps/sogou_sync.sh
 
-# ssh configuration
-backup_file ~/.ssh/config
-if [[ ! -e ~/.ssh ]]; then
-    mkdir ~/.ssh
-fi
-ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
-
 # Personal
 ~/.macbootstrap/install-steps/personal.sh
-~/.macbootstrap/personal.sh
 

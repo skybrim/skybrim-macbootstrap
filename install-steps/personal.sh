@@ -6,9 +6,8 @@ if [[ "$username" == $(whoami) ]]; then
     git config --global user.name skybrim
     git config --global user.email throughskybrim@gmail.com
 
-    # 生成 .ssh 文件
-    if [[ ! -d $HOME/.ssh ]]; then
-        mkdir $HOME/.ssh
-    fi
+    # ssh configuration
+    ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 
+    # 配置 GPG
 fi
