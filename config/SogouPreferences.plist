@@ -5,9 +5,9 @@
 	<key>AutoPBCounts</key>
 	<string>0</string>
 	<key>ToDaySecondsForAutoPingBack</key>
-	<string>2018118</string>
+	<string>2019813</string>
 	<key>kSGAutoUpdatePicface</key>
-	<string>2018118</string>
+	<string>2019813</string>
 	<key>kSGAutoUpdatePicfaceCounts</key>
 	<string>0</string>
 	<key>keyAddPlanSwitch</key>
@@ -36,16 +36,20 @@
 	<string>0</string>
 	<key>keyEnglisInputMethod</key>
 	<string>0</string>
+	<key>keyHasContactAuthorization</key>
+	<string>0</string>
 	<key>keyHideInline</key>
 	<string>0</string>
 	<key>keyInsertWordSpaceEIM</key>
 	<string>1</string>
 	<key>keyNewPhraseAlert</key>
 	<string>1</string>
+	<key>keyPicFaceStatusItem</key>
+	<string>0</string>
 	<key>keyPunctuationMatch</key>
 	<string>1</string>
 	<key>keySkinPath</key>
-	<string>/Library/Input Methods/SogouInput.app/Contents/Resources/Skins/记事本</string>
+	<string>/Library/Input Methods/SogouInput.app/Contents/Resources/Skins/简约黑2</string>
 	<key>keySpeechStatusItem</key>
 	<string>0</string>
 	<key>keyStatusItem</key>
