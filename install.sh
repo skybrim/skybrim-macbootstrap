@@ -102,7 +102,8 @@ brew_install scmpuff
 brew_install fzf
 brew_install fd
 brew_install the_silver_searcher
-brew install vim --with-override-system-vi
+brew_install vim
+brew_install hugo
 brew_install exiftool
 brew_install archey
 brew_install ranger

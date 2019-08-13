@@ -42,24 +42,27 @@ export PATH=$PATH:$GOBIN
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
 
-# for nvm
-export NVM_DIR=~/.nvm
-export EDITOR="nvim"
-#source $(brew --prefix nvm)/nvm.sh
-export NVM_SH="/usr/local/opt/nvm/nvm.sh"
-# https://github.com/creationix/nvm/issues/860
-declare -a NODE_GLOBALS=(`find $NVM_DIR/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
+# for vim
+export PATH=/usr/local/Cellar/vim/8.1.1800:$PATH   
 
-NODE_GLOBALS+=("node")
-NODE_GLOBALS+=("nvm")
+# # for nvm
+# export NVM_DIR=~/.nvm
+# export EDITOR="nvim"
+# #source $(brew --prefix nvm)/nvm.sh
+# export NVM_SH="/usr/local/opt/nvm/nvm.sh"
+# # https://github.com/creationix/nvm/issues/860
+# declare -a NODE_GLOBALS=(`find $NVM_DIR/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
 
-load_nvm () {
-    [ -s "$NVM_SH" ] && . "$NVM_SH"
-}
+# NODE_GLOBALS+=("node")
+# NODE_GLOBALS+=("nvm")
 
-for cmd in "${NODE_GLOBALS[@]}"; do
-    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
-done
+# load_nvm () {
+#     [ -s "$NVM_SH" ] && . "$NVM_SH"
+# }
+
+# for cmd in "${NODE_GLOBALS[@]}"; do
+#     eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
+# done
 
 # Bind key
 bindkey ';' autosuggest-execute
