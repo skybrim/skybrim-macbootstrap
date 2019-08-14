@@ -133,6 +133,7 @@ chsh -s /bin/zsh
 # vim configuration
 backup_file ~/.vimrc
 ln -s ~/.macbootstrap/zsh-config/.vimrc ~/.vimrc
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 # ESLint configuration
