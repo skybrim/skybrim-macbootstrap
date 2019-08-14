@@ -45,6 +45,9 @@ export PATH="/usr/local/sbin:$PATH"
 # for vim
 export PATH=/usr/local/Cellar/vim/8.1.1800:$PATH   
 
+# gpg
+export GPG_TTY=$(tty)
+
 # # for nvm
 # export NVM_DIR=~/.nvm
 # export EDITOR="nvim"

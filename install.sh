@@ -131,7 +131,9 @@ ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 chsh -s /bin/zsh
 
 # vim configuration
-ln -s ~/.config/vimrc ~/.vimrc
+backup_file ~/.vimrc
+ln -s ~/.macbootstrap/zsh-config/.vimrc ~/.vimrc
+vim +PluginInstall +qall
 
 # ESLint configuration
 backup_file ~/.eslintrc.js
