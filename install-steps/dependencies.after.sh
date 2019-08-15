@@ -109,7 +109,7 @@ fi
 #                                                #
 #                                                #
 ##################################################
-brew cask install proxifier
+# brew cask install proxifier
 open /Applications/Proxifier.app
 defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
 defaults write com.initex.proxifier.macosx.plist LicenseKey -string "P427L-9Y552-5433E-8DSR3-58Z68"
