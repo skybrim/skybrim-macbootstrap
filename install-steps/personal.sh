@@ -7,6 +7,9 @@ if [[ "$username" == $(whoami) ]]; then
     git config --global user.email throughskybrim@gmail.com
 
     # ssh configuration
+    if [[ ! -d $HOME/.ssh ]]; then
+        mkdir $HOME/.ssh
+    fi
     ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 
     # 配置 GPG
