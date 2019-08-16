@@ -25,6 +25,13 @@ else
     brew cask install charles
 fi
 
+# motrix
+if [[ -e /Applications/Motrix.app ]]; then
+    echo "You have installed Motrix"
+else
+    brew cask install motrix
+fi
+
 # Dash 文档
 if [[ ! -e /Applications/Dash.app ]]; then
     brew cask install dash
