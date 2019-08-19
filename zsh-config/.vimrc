@@ -15,6 +15,7 @@ Plugin 'kannokanno/previm'
 Plugin 'tyru/open-browser.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -103,9 +104,24 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+" 通用配置
 set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom
 set termencoding=utf-8
 set encoding=utf-8
 :set tabstop=4 "设置tab宽度为4个字符
 :set shiftwidth=4 "设置自动缩进为4个字符
 :set noexpandtab "用space替代tab输入
+
+" YCM 配置
+" 自动补全配置
+ set completeopt=longest,menu
+" "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+" 离开插入模式后自动关闭预览窗口
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+" 回车即选中当前项
+" 上下左右键的行为 会显示其他信息
+ inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+ inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+ inoremap <expr> <PageDown> pumvisible() ? \<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" :"\<PageUp>"

@@ -133,6 +133,7 @@ backup_file ~/.vimrc
 ln -s ~/.macbootstrap/zsh-config/.vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+~/.vim/bundle/YouCompleteMe/install.sh --clang-completer --system-libclang
 
 # ESLint configuration
 backup_file ~/.eslintrc.js
