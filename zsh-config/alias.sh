@@ -51,5 +51,3 @@ alias -g NE="2> /dev/null"
 alias -g NUL="> /dev/null 2>&1"
 
 alias work='tmux attach -t work'
-
-alias vscode='open -a /Applications/Visual\ Studio\ Code.app/'
