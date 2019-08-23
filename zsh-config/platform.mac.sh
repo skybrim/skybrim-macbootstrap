@@ -47,6 +47,15 @@ function proxy() {
         networksetup -setautoproxystate $network off;
         networksetup -setsocksfirewallproxy "$network" localhost 10009
         ;;
+    pac)
+        networksetup -setwebproxystate $network off;
+        networksetup -setsecurewebproxystate  $network off;
+        networksetup -setsocksfirewallproxystate $network off;
+        networksetup -setautoproxystate $network on 
+        # 设置 pac 文件地址 
+        networksetup -setautoproxyurl $network 'http://localhost/ss.pac'
+        sudo apachectl -t
+        ;;
     off)
         networksetup -setwebproxystate $network off;
         networksetup -setsecurewebproxystate  $network off;
@@ -196,10 +205,6 @@ function bsfn () {
 
 function bssclient () {
     nohup sslocal -q -c ~/.macbootstrap/tools/netconf.json &> $BSTEMP/nohup.out&
-    # 开启自动代理配置
-    networksetup -setautoproxystate $network on 
-    # 设置 pac 文件地址
-    networksetup -setautoproxyurl $network 'file:///Users/wiley/.macbootstrap/tools/ss.pac'
 }
 
 function c() {
