@@ -91,7 +91,7 @@ function proxy() {
         echo "Usage: p {on|off|g|s}"
         echo "p on : Set proxy to Charles(port 8888)"
         echo "p off: Reset proxy to system default"
-        echo "p g  : Set proxy to GoAgentx(port 14179)"
+        echo "p g  : Set proxy to GoAgentx(port 10009)"
         echo "p s  : Show current network proxy status"
         echo "p *  : Show usage"
         ;;
