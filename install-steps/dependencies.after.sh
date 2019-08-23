@@ -18,13 +18,6 @@ brew cask install the-unarchiver
 # Install applications
 # ---------------
 
-# Install Charles
-if [[ -e /Applications/Charles.app ]]; then
-    echo "You have installed charles"
-else
-    brew cask install charles
-fi
-
 # motrix
 if [[ -e /Applications/Motrix.app ]]; then
     echo "You have installed Motrix"
@@ -120,6 +113,13 @@ fi
 open /Applications/Proxifier.app
 defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
 defaults write com.initex.proxifier.macosx.plist LicenseKey -string "P427L-9Y552-5433E-8DSR3-58Z68"
+
+# Install Charles
+# if [[ -e /Applications/Charles.app ]]; then
+#     echo "You have installed charles"
+# else
+#     brew cask install charles
+# fi
 
 # Python
 # ---------------
