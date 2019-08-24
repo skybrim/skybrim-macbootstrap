@@ -7,12 +7,13 @@ brew install python3
 pip3 install shadowsocks
 
 # install and use shadowsocks
-if not_tt_network; then
+if not_wiley_network; then
     nohup sslocal -q -c ~/.macbootstrap/tools/netconf.json &> /private/tmp/nohup.out&
     export ALL_PROXY=socks5://127.0.0.1:10009
+    sudo apachectl -t
     ln -s ~/.macbootstrap/tools/ss.pac /Library/WebServer/Documents/ss.pac
 else
-    echo "You are in toutiao network, no need to use ss now"
+    echo "You are in wiley network, no need to use ss now"
 fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then

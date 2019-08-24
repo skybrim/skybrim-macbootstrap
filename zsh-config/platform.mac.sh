@@ -54,7 +54,6 @@ function proxy() {
         networksetup -setautoproxystate $network on 
         # 设置 pac 文件地址 
         networksetup -setautoproxyurl $network 'http://localhost/ss.pac'
-        sudo apachectl -t
         ;;
     off)
         networksetup -setwebproxystate $network off;
