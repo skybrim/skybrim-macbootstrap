@@ -7,10 +7,21 @@ brew tap v2ray/v2ray
 brew install v2ray-core
 
 # install and use shadowsocks
+<<<<<<< HEAD
 ln -s ~/.macbootstrap/tools/config.json /usr/local/etc/v2ray/config.json
 brew services start v2ray-core
 export ALL_PROXY=socks5://127.0.0.1:10009
 ln -s ~/.macbootstrap/tools/ss.pac /Library/WebServer/Documents/ss.pac
+=======
+if not_wiley_network; then
+    nohup sslocal -q -c ~/.macbootstrap/tools/netconf.json &> /private/tmp/nohup.out&
+    export ALL_PROXY=socks5://127.0.0.1:10009
+    sudo apachectl -t
+    ln -s ~/.macbootstrap/tools/ss.pac /Library/WebServer/Documents/ss.pac
+else
+    echo "You are in wiley network, no need to use ss now"
+fi
+>>>>>>> 8b1ba9ce3832eb4a4e9d46d355ee4a492f35dc0b
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
