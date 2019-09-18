@@ -3,17 +3,14 @@ source $HOME/.macbootstrap/basic.sh
 
 sudo sh ~/.macbootstrap/install-steps/macos.sh
 
-brew install python3
-pip3 install shadowsocks
+brew tap v2ray/v2ray
+brew install v2ray-core
 
 # install and use shadowsocks
-if not_tt_network; then
-    nohup sslocal -q -c ~/.macbootstrap/tools/netconf.json &> /private/tmp/nohup.out&
-    export ALL_PROXY=socks5://127.0.0.1:10009
-    ln -s ~/.macbootstrap/tools/ss.pac /Library/WebServer/Documents/ss.pac
-else
-    echo "You are in toutiao network, no need to use ss now"
-fi
+ln -s ~/.macbootstrap/tools/config.json /usr/local/etc/v2ray/config.json
+brew services start v2ray-core
+export ALL_PROXY=socks5://127.0.0.1:10009
+ln -s ~/.macbootstrap/tools/ss.pac /Library/WebServer/Documents/ss.pac
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
@@ -85,6 +82,7 @@ else
     echo "You have installed coreutils"
 fi
 
+brew install python3
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install redis
 brew_install cmake
