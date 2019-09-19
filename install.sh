@@ -6,12 +6,15 @@ sudo sh ~/.macbootstrap/install-steps/macos.sh
 brew tap v2ray/v2ray
 brew install v2ray-core
 
-# install and use shadowsocks
+if not_wiley_network; then
 ln -s ~/.macbootstrap/tools/config.json /usr/local/etc/v2ray/config.json
 brew services start v2ray-core
 export ALL_PROXY=socks5://127.0.0.1:10009
 sudo apachectl -t
 ln -s ~/.macbootstrap/tools/ss.pac /Library/WebServer/Documents/ss.pac
+else
+    echo "no need to use ss now"
+fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
