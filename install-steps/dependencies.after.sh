@@ -39,18 +39,11 @@ else
     echo "You have installed alfred 4"
 fi
 
-# iina 播放器
-if [[ ! -e /Applications/iina.app ]]; then
-    brew cask install iina
+# vlc 播放器
+if [[ ! -e /Applications/vlc.app ]]; then
+    brew cask install vlc
 else
-    echo "You have installed iina"
-fi
-
-# ticktick 滴答清单
-if [[ ! -e /Applications/ticktick.app ]]; then
-    brew cask install ticktick
-else
-    echo "You have installed ticktick"
+    echo "You have installed vlc"
 fi
 
 # Fliqlo 屏保
@@ -58,13 +51,6 @@ if [[ ! -e /Applications/Fliqlo.app ]]; then
     brew cask install fliqlo
 else
     echo "You have installed fliqlo"
-fi
-
-# spectacle 分屏工具
-if [[ ! -e /Applications/spectacle.app ]]; then
-    brew cask install spectacle
-else
-    echo "You have installed spectacle"
 fi
 
 # stretchly 定时休息提醒
@@ -110,9 +96,9 @@ fi
 #                                                #
 ##################################################
 # brew cask install proxifier
-open /Applications/Proxifier.app
-defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
-defaults write com.initex.proxifier.macosx.plist LicenseKey -string "P427L-9Y552-5433E-8DSR3-58Z68"
+# open /Applications/Proxifier.app
+# defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
+# defaults write com.initex.proxifier.macosx.plist LicenseKey -string "P427L-9Y552-5433E-8DSR3-58Z68"
 
 # Install Charles
 # if [[ -e /Applications/Charles.app ]]; then
