@@ -120,14 +120,14 @@ sudo gem install -n /usr/local/bin cocoapods-plugins
 sudo gem install colored
 
 # nvm & npm install
-# if [[ ! -d $HOME/.nvm ]]; then
-#     mkdir $HOME/.nvm
-# fi
-# export NVM_DIR="$HOME/.nvm"
-# source $(brew --prefix nvm)/nvm.sh
-# export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
-# nvm install 9.11.0
-# ~/.macbootstrap/install-steps/node_global.sh
+if [[ ! -d $HOME/.nvm ]]; then
+    mkdir $HOME/.nvm
+fi
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+nvm install 9.11.0
+~/.macbootstrap/install-steps/node_global.sh
 
 # hook login
 ~/.macbootstrap/install-steps/hook_login.sh

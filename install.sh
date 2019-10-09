@@ -93,7 +93,7 @@ brew_install cmake
 brew_install gawk
 brew_install autojump
 brew_install wget
-# brew_install nvm
+brew_install nvm
 brew_install exiv2
 brew_install ssh-copy-id
 brew_install imagemagick
