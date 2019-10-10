@@ -93,7 +93,6 @@ brew_install cmake
 brew_install gawk
 brew_install autojump
 brew_install wget
-brew_install nvm
 brew_install exiv2
 brew_install ssh-copy-id
 brew_install imagemagick
@@ -139,9 +138,9 @@ vim +PluginInstall +qall
 # ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer --system-libclang
 
 # ESLint configuration
-backup_file ~/.eslintrc.js
-backup_file ~/.eslintrc
-ln -s ~/.macbootstrap/.eslintrc.js ~/.eslintrc.js
+# backup_file ~/.eslintrc.js
+# backup_file ~/.eslintrc
+# ln -s ~/.macbootstrap/.eslintrc.js ~/.eslintrc.js
 
 # Ranger configuration
 # if [[ ! -e $HEME/.config/ranger ]]; then
