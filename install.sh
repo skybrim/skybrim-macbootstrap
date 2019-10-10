@@ -144,15 +144,15 @@ backup_file ~/.eslintrc
 ln -s ~/.macbootstrap/.eslintrc.js ~/.eslintrc.js
 
 # Ranger configuration
-if [[ ! -e $HEME/.config/ranger ]]; then
-    mkdir -p $HOME/.config/ranger
-fi
-old_commands_py=$HOME/.config/ranger/commands.py
-old_rc_conf=$HOME/.config/ranger/rc.conf
-backup_file "$old_commands_py"
-backup_file "$old_rc_conf"
-ln -s ~/.macbootstrap/config/ranger/commands.py "$old_commands_py"
-ln -s ~/.macbootstrap/config/ranger/rc.conf "$old_rc_conf"
+# if [[ ! -e $HEME/.config/ranger ]]; then
+#     mkdir -p $HOME/.config/ranger
+# fi
+# old_commands_py=$HOME/.config/ranger/commands.py
+# old_rc_conf=$HOME/.config/ranger/rc.conf
+# backup_file "$old_commands_py"
+# backup_file "$old_rc_conf"
+# ln -s ~/.macbootstrap/config/ranger/commands.py "$old_commands_py"
+# ln -s ~/.macbootstrap/config/ranger/rc.conf "$old_rc_conf"
 
 # install-steps
 ~/.macbootstrap/install-steps/dependencies.before.sh
