@@ -10,6 +10,7 @@ if [[ "$username" == $(whoami) ]]; then
     if [[ ! -d $HOME/.ssh ]]; then
         mkdir $HOME/.ssh
     fi
+    backup_file ~/.ssh/config
     ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 
     # 配置 GPG
