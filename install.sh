@@ -137,10 +137,17 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 # ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer --system-libclang
 
+# nvm
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+~/.macbootstrap/install-steps/node_global.sh
+
 # ESLint configuration
-# backup_file ~/.eslintrc.js
-# backup_file ~/.eslintrc
-# ln -s ~/.macbootstrap/.eslintrc.js ~/.eslintrc.js
+backup_file ~/.eslintrc.js
+backup_file ~/.eslintrc
+ln -s ~/.macbootstrap/.eslintrc.js ~/.eslintrc.js
 
 # Ranger configuration
 # if [[ ! -e $HEME/.config/ranger ]]; then
