@@ -18,12 +18,8 @@ fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
-    # defaults delete com.googlecode.iterm2
-    # cp ~/.macbootstrap/config/com.googlecode.iterm2.plist $HOME/Library/Preferences
-    # # config background image location
-    # # command="set :New\ Bookmarks:0:Background\ Image\ Location /Users/""$(whoami)""/.macbootstrap/assets/iterm-background.jpg"
-    # /usr/libexec/PlistBuddy -c "$command" $HOME/Library/Preferences/com.googlecode.iterm2.plist
-    # defaults read -app iTerm >/dev/null
+    defaults delete com.googlecode.iterm2
+    cp ~/.macbootstrap/config/com.googlecode.iterm2.plist $HOME/Library/Preferences
 else
     echo "You have installed iTerm2"
 fi
@@ -109,8 +105,11 @@ brew_install exiftool
 brew_install archey
 brew_install ranger
 brew_install tree
+brew_install neofetch
 brew_install git-lfs && git lfs install
 $(brew --prefix)/opt/fzf/install --all
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
@@ -125,10 +124,11 @@ fi
 
 # zshrc setup
 backup_file ~/.zshrc
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
-chsh -s /bin/zsh
 
 # vim configuration
 backup_file ~/.vimrc
