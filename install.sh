@@ -171,3 +171,5 @@ unset ALL_PROXY
 # Personal
 ~/.macbootstrap/install-steps/personal.sh
 
+# Xcode font preferences
+# ~/Library/Developer/Xcode/UserData/FontAndColorThemes
