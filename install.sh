@@ -22,7 +22,7 @@ else
     echo "You have installed iTerm2"
 fi
 # iTerm2 preference json
-sudo cp ~/.macbootstrap/config/Skybrim.json ~/Library/Application Support/iTerm2/DynamicProfiles/
+sudo cp ~/.macbootstrap/config/Skybrim.json ~/Library/ApplicationSupport/iTerm2/DynamicProfiles 
 
 if [[ ! -e /Applications/SourceTree.app ]]; then
     brew cask install sourcetree
