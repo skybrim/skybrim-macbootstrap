@@ -18,11 +18,11 @@ fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
-    defaults delete com.googlecode.iterm2
-    cp ~/.macbootstrap/config/com.googlecode.iterm2.plist $HOME/Library/Preferences
 else
     echo "You have installed iTerm2"
 fi
+# iTerm2 preference json
+sudo cp ~/.macbootstrap/config/Skybrim.json ~/Library/Application Support/iTerm2/DynamicProfiles/
 
 if [[ ! -e /Applications/SourceTree.app ]]; then
     brew cask install sourcetree
