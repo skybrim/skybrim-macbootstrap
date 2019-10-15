@@ -107,17 +107,17 @@ fi
 #     brew cask install charles
 # fi
 
-# Python
-# ---------------
-unset ALL_PROXY
-pip3 install --trusted-host pypi.python.org jedi ipython #neovim
-pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
-
 # Gem update
 sudo gem update # --system 2.7.6
 sudo gem install -n /usr/local/bin cocoapods
 sudo gem install -n /usr/local/bin cocoapods-plugins
 sudo gem install colored
+
+# Python
+# ---------------
+unset ALL_PROXY
+pip3 install --trusted-host pypi.python.org jedi ipython #neovim
+pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
 
 # hook login
 ~/.macbootstrap/install-steps/hook_login.sh
