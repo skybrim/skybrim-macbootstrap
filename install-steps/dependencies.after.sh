@@ -116,8 +116,8 @@ sudo gem install colored
 # Python
 # ---------------
 unset ALL_PROXY
-pip3 install --trusted-host pypi.python.org jedi ipython #neovim
-pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
+# pip3 install --trusted-host pypi.python.org jedi ipython #neovim
+# pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
 
 # hook login
 ~/.macbootstrap/install-steps/hook_login.sh
