@@ -24,10 +24,10 @@ fi
 # iTerm2 preference json
 sudo cp ~/.macbootstrap/config/Skybrim.json ~/Library/ApplicationSupport/iTerm2/DynamicProfiles 
 
-if [[ ! -e /Applications/SourceTree.app ]]; then
-    brew cask install sourcetree
+if [[ ! -e /Applications/fork.app ]]; then
+    brew cask install fork
 else
-    echo "You have installed SourceTree"
+    echo "You have installed fork"
 fi
 
 if [[ ! -e /Applications/WeChat.app ]]; then
