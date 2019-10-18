@@ -106,10 +106,9 @@ brew_install archey
 brew_install ranger
 brew_install tree
 brew_install neofetch
+brew_install yasm
 brew_install git-lfs && git lfs install
 $(brew --prefix)/opt/fzf/install --all
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
@@ -167,6 +166,9 @@ ln -s ~/.macbootstrap/.eslintrc.js ~/.eslintrc.js
 # 取消代理
 unset ALL_PROXY
 ~/.macbootstrap/install-steps/sogou_sync.sh
+
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
 
 # Personal
 ~/.macbootstrap/install-steps/personal.sh
