@@ -41,6 +41,7 @@ export PATH=$PATH:$GOBIN
 
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
+export HOMEBREW_NO_AUTO_UPDATE=true
 
 # for vim
 export PATH=/usr/local/Cellar/vim/8.1.1800:$PATH   
