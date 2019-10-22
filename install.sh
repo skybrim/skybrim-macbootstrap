@@ -56,7 +56,6 @@ fi
 
 if [[ ! -e /Applications/Visual\ Studio\ Code.app ]]; then
     brew cask install visual-studio-code
-    sh ~/.macbootstrap/vscode/setup.sh
 else
     echo "You have installed vscode"
 fi
