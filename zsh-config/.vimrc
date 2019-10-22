@@ -108,6 +108,7 @@ endif
 set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom
 set termencoding=utf-8
 set encoding=utf-8
+set relativenumber
 :set tabstop=4 "设置tab宽度为4个字符
 :set shiftwidth=4 "设置自动缩进为4个字符
 :set noexpandtab "用space替代tab输入
