@@ -44,7 +44,6 @@ fi
 
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     brew cask install google-chrome
-    
     # Set Chrome as default browser
     git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
     (cd ./tools/defaultbrowser && make && make install)
@@ -76,7 +75,6 @@ fi
 # install coreutils
 if [[ ! -e /usr/local/opt/coreutils ]]; then
     brew install coreutils
-    mv /usr/local/opt/coreutils/libexec/gnubin/ls /usr/local/opt/coreutils/libexec/gnubin/gls
 else
     echo "You have installed coreutils"
 fi
@@ -84,29 +82,27 @@ fi
 brew install python3
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install redis
-brew_install cmake
-brew_install gawk
-brew_install autojump
-brew_install wget
-brew_install exiv2
-brew_install ssh-copy-id
-brew_install imagemagick
-brew_install catimg
-brew_install gpg
-brew_install icdiff
-brew_install scmpuff
-brew_install fzf
-brew_install fd
-brew_install the_silver_searcher
-brew_install vim
-brew_install hugo
-brew_install exiftool
-brew_install archey
-brew_install ranger
-brew_install tree
-brew_install neofetch
-brew_install yasm
-brew_install git-lfs && git lfs install
+brew install cmake
+brew install gawk
+brew install autojump
+brew install wget
+brew install exiv2
+brew install ssh-copy-id
+brew install imagemagick
+brew install catimg
+brew install gpg
+brew install icdiff
+brew install scmpuff
+brew install fzf
+brew install fd
+brew install the_silver_searcher
+brew install vim
+brew install exiftool
+brew install archey
+brew install ranger
+brew install neofetch
+brew install yasm
+brew install git-lfs && git lfs install
 $(brew --prefix)/opt/fzf/install --all
 
 # link git config
@@ -117,23 +113,20 @@ ln -s ~/.macbootstrap/git-config/.gitattributes ~/.gitattributes
 ln -s ~/.macbootstrap/git-config/.gitignore_global ~/.gitignore_global
 
 if [[ ! -e ~/.oh-my-zsh ]]; then
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 # zshrc setup
 backup_file ~/.zshrc
+ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 
 # vim configuration
 backup_file ~/.vimrc
 ln -s ~/.macbootstrap/zsh-config/.vimrc ~/.vimrc
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-# ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer --system-libclang
 
 # nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
@@ -141,22 +134,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 ~/.macbootstrap/install-steps/node_global.sh
-
-# ESLint configuration
-backup_file ~/.eslintrc.js
-backup_file ~/.eslintrc
-ln -s ~/.macbootstrap/.eslintrc.js ~/.eslintrc.js
-
-# Ranger configuration
-# if [[ ! -e $HEME/.config/ranger ]]; then
-#     mkdir -p $HOME/.config/ranger
-# fi
-# old_commands_py=$HOME/.config/ranger/commands.py
-# old_rc_conf=$HOME/.config/ranger/rc.conf
-# backup_file "$old_commands_py"
-# backup_file "$old_rc_conf"
-# ln -s ~/.macbootstrap/config/ranger/commands.py "$old_commands_py"
-# ln -s ~/.macbootstrap/config/ranger/rc.conf "$old_rc_conf"
 
 # install-steps
 ~/.macbootstrap/install-steps/dependencies.before.sh

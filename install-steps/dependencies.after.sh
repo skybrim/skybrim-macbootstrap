@@ -15,9 +15,6 @@ brew cask install --appdir='/usr/local/bin' qlimagesize qlvideo # Avoid password
 # Zip tool
 brew cask install the-unarchiver
 
-# Install applications
-# ---------------
-
 # motrix
 if [[ -e /Applications/Motrix.app ]]; then
     echo "You have installed Motrix"
@@ -113,11 +110,7 @@ sudo gem install -n /usr/local/bin cocoapods
 sudo gem install -n /usr/local/bin cocoapods-plugins
 sudo gem install colored
 
-# Python
-# ---------------
 unset ALL_PROXY
-# pip3 install --trusted-host pypi.python.org jedi ipython #neovim
-# pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
 
 # hook login
-~/.macbootstrap/install-steps/hook_login.sh
+# ~/.macbootstrap/install-steps/hook_login.sh

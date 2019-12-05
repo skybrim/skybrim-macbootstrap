@@ -5,7 +5,7 @@
     <key>LaunchOnlyOnce</key>
     <true/>
     <key>Label</key>
-    <string>com.bestswifter.onlogin</string>
+    <string>com.wiley.onlogin</string>
     <key>ProgramArguments</key>
     <array>
         <string>zsh</string>
