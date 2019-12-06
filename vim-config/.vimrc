@@ -1,128 +1,82 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-"Plugin 'godlygeek/tabular'
-"Bundle 'gabrielelana/vim-markdown'
-Plugin 'kannokanno/previm'
-Plugin 'tyru/open-browser.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'Valloric/YouCompleteMe'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"
-"
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Jan 26
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
-" When started as "evim", evim.vim will already have done these settings, bail
-" out.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
-
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-"else
-"  set backup		" keep a backup file (restore to previous version)
-  if has('persistent_undo')
-    set undofile	" keep an undo file (undo changes after closing)
-  endif
-endif
-
-if &t_Co > 2 || has("gui_running")
-  " Switch on highlighting the last used search pattern.
-  set hlsearch
-endif
-
-" Put these in an autocmd group, so that we can delete them easily.
-augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-augroup END
-
-" Add optional packages.
-"
-" The matchit plugin makes the % command work better, but it is not backwards
-" compatible.
-" The ! means the package won't be loaded right away but when plugins are
-" loaded during initialization.
-if has('syntax') && has('eval')
-  packadd! matchit
-endif
-
-" 通用配置
+"基础配置
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom
 set termencoding=utf-8
 set encoding=utf-8
-set relativenumber
-:set tabstop=4 "设置tab宽度为4个字符
-:set shiftwidth=4 "设置自动缩进为4个字符
-:set noexpandtab "用space替代tab输入
 
-" YCM 配置
-" 自动补全配置
- set completeopt=longest,menu
-" "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
- autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-" 离开插入模式后自动关闭预览窗口
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-" 回车即选中当前项
-" 上下左右键的行为 会显示其他信息
- inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
- inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
- inoremap <expr> <PageDown> pumvisible() ? \<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
- inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" :"\<PageUp>"
+set number "绝对行号
+set relativenumber "相对行号
+set smartindent "智能缩进
+set autoindent "当前行的缩进复制到新行
+set shiftwidth=4 "缩进的列数
+set tabstop=4 "<Tab>输出几个空格
+set expandtab "空格代替<Tab>
+set scrolloff=3 "光标距离屏幕顶部和底部3行
+set showmatch "自动匹配括号
+set clipboard=unnamed " 系统剪切板=无名寄存器
+set cursorline " 设置高亮光标所在行
+highlight CursorLine   cterm=NONE ctermbg=lightgray ctermfg=black guibg=red guifg=white
+
+"插件管理
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+filetype off
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'mhinz/vim-startify'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+" 文件管理
+Plug 'scrooloose/nerdtree'
+" 标签共享nerdtree
+Plug 'jistr/vim-nerdtree-tabs'
+" 在nerdtree中显示git信息
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" 快速注释
+Plug 'scrooloose/nerdcommenter'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'brooth/far.vim'
+Plug 'majutsushi/tagbar'
+Plug 'lfv89/vim-interestingwords'
+Plug 'Chiel92/vim-autoformat'
+Plug 'dense-analysis/ale'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
+
+filetype plugin indent on
+
+# 快捷操作
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap ( ()<ESC>i
+inoremap () ()<ESC>a
+
+inoremap [ []<ESC>i
+inoremap [] []<ESC>a
+
+inoremap {<SPACE> {<SPACE><SPACE>};<ESC><LEFT><LEFT>i
+inoremap {; {<ESC>jA;<ESC>kA
+inoremap { {}<ESC>i<CR><CR><ESC>kA<TAB><RIGHT><RIGHT>
+inoremap {} {}<ESC>a
+
+inoremap < <><ESC>i
+inoremap <<SPACE> <<ESC><RIGHT>r<SPACE>a
+inoremap << <<<ESC><RIGHT>r<SPACE>a<BACKSPACE>
+inoremap <= <=<ESC>a
+inoremap <> <><ESC>a
+
+inoremap "" ""<ESC>i
+inoremap '' ''<ESC>i
+
+
