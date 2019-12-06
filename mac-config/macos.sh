@@ -1,5 +1,5 @@
 # Disable guest account
-sudo bash ~/.macbootstrap/install-steps/guest_account.sh disable
+sudo bash ~/.macbootstrap/mac-config/guest_account.sh disable
 
 # Use F1-F12 as standard function keys
 defaults write -globalDomain com.apple.keyboard.fnState -int 1
@@ -11,7 +11,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write com.apple.dock autohide -bool true
 
 # Hide some app icons in Dock and make dock lays left
-clang -framework Foundation ~/.macbootstrap/tools/DockIconHider_source.m -o DockIconHider
+clang -framework Foundation ~/.macbootstrap/mac-config/DockIconHider_source.m -o DockIconHider
 ./DockIconHider
 rm ./DockIconHider
 
@@ -56,10 +56,10 @@ chflags nohidden ~/Library
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Hide Siri Icon in menu bar
-cp ~/.macbootstrap/config/com.apple.Siri.plist ~/Library/Preferences/
+cp ~/.macbootstrap/mac-config/com.apple.Siri.plist ~/Library/Preferences/
 
 # Hide input source Icon in menu bar
-cp ~/.macbootstrap/config/com.apple.systemuiserver.plist ~/Library/Preferences/
+cp ~/.macbootstrap/mac-config/com.apple.systemuiserver.plist ~/Library/Preferences/
 
 # Disable app verifying
 sudo spctl --master-disable

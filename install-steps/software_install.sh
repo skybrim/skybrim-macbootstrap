@@ -1,19 +1,56 @@
+# install software
 source $HOME/.macbootstrap/basic.sh
 
-# Homebrew
-# ---------------
+if [[ ! -e /Applications/iTerm.app ]]; then
+    brew cask install iterm2
+else
+    echo "You have installed iTerm2"
+fi
+# iTerm2 preference json
+sudo cp ~/.macbootstrap/config/Skybrim.json ~/Library/ApplicationSupport/iTerm2/DynamicProfiles 
+
+if [[ ! -e /Applications/fork.app ]]; then
+    brew cask install fork
+else
+    echo "You have installed fork"
+fi
+
+if [[ ! -e /Applications/WeChat.app ]]; then
+    brew cask install wechat
+else
+    echo "You have installed WeChat"
+fi
+
+if [[ ! -e /Applications/qq.app ]]; then
+    brew cask install qq
+else
+    echo "You have installed qq"
+fi
+
 brew cask install sogouinput
 sogou_base="/usr/local/Caskroom/sogouinput"
 sogou_version="$sogou_base/"`ls "$sogou_base"`
 sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
 open "$sogou_app"
+bash sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
-# Extension for preview
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook provisionql quicklookapk
-brew cask install --appdir='/usr/local/bin' qlimagesize qlvideo # Avoid password
+if [[ ! -e /Applications/Google\ Chrome.app ]]; then
+    brew cask install google-chrome
+    # Set Chrome as default browser
+    git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
+    (cd ./tools/defaultbrowser && make && make install)
+    defaultbrowser chrome
+    [[ -d ./tools/defaultbrowser ]] && rm -rf ./tools/defaultbrowser
+else
+    echo "You have installed chrome"
+fi
 
-# Zip tool
-brew cask install the-unarchiver
+if [[ ! -e /Applications/Visual\ Studio\ Code.app ]]; then
+    brew cask install visual-studio-code
+else
+    echo "You have installed vscode"
+fi
+
 
 # motrix
 if [[ -e /Applications/Motrix.app ]]; then
@@ -85,13 +122,9 @@ else
     echo "You have installed picgo"
 fi
 
-##################################################
-#                                                #
-#                                                #
-#               Install Proxifier                #
-#                                                #
-#                                                #
-##################################################
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+
 # brew cask install proxifier
 # open /Applications/Proxifier.app
 # defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
@@ -103,14 +136,3 @@ fi
 # else
 #     brew cask install charles
 # fi
-
-# Gem update
-sudo gem update # --system 2.7.6
-sudo gem install -n /usr/local/bin cocoapods
-sudo gem install -n /usr/local/bin cocoapods-plugins
-sudo gem install colored
-
-unset ALL_PROXY
-
-# hook login
-# ~/.macbootstrap/install-steps/hook_login.sh
