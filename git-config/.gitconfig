@@ -29,5 +29,11 @@
 [user]
 	email = throughskybrim@gmail.com
 	name = skybrim
+	signingkey = 4CD21439715D0A54A595F3A8CFDE0C24A7F2CCEB
 [commit]
 	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

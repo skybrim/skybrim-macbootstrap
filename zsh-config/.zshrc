@@ -6,20 +6,21 @@ plugins=(git extract encode64 urltools brew zsh-syntax-highlighting zsh-autosugg
 ZSH_THEME="spaceship"
 
 source $ZSH/oh-my-zsh.sh
-
+source ~/.macbootstrap/zsh-config/func.sh
 source /usr/local/etc/profile.d/autojump.sh
 if brew ls --versions scmpuff > /dev/null; then
     eval "$(scmpuff init -s --aliases=false)"
 fi
 
 # Homebrew
-export PATH="/usr/local/sbin:$PATH"
 export HOMEBREW_NO_AUTO_UPDATE=true
-export PATH="/usr/local/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
 
 # gpg
 export GPG_TTY=$(tty)
 
 # coreutils
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

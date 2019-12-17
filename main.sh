@@ -20,13 +20,14 @@ else
 fi
 
 # start install
-bash sh ~/.macbootstrap/install-steps/install.sh
+sudo sh ~/.macbootstrap/install-steps/software_install.sh
+sudo sh ~/.macbootstrap/install-steps/terminal_install.sh
 # git config
-bash sh ~/.macbootstrap/git-config/git_install.sh
+sudo sh ~/.macbootstrap/git-config/git_install.sh
 # vim config
-bash sh ~/.macbootstrap/vim-config/vim_install.sh
+sudo sh ~/.macbootstrap/vim-config/vim_install.sh
 # zsh config
-bash sh ~/.macbootstrap/zsh-config/zsh_install.sh
+sudo sh ~/.macbootstrap/zsh-config/zsh_install.sh
 
 # 取消代理
 unset ALL_PROXY

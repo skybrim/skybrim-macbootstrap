@@ -38,7 +38,6 @@ brew install scmpuff
 brew install fzf
 brew install fd
 brew install the_silver_searcher
-brew install vim
 brew install exiftool
 brew install archey
 brew install ranger
@@ -63,6 +62,8 @@ brew cask install --appdir='/usr/local/bin' qlimagesize qlvideo # Avoid password
 brew cask install the-unarchiver
 
 # Gem update
+gem source -r https://rubygems.org/
+gem source --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/
 sudo gem update # --system 2.7.6
 sudo gem install -n /usr/local/bin cocoapods
 sudo gem install -n /usr/local/bin cocoapods-plugins

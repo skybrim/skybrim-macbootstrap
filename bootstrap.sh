@@ -20,4 +20,4 @@ git clone --depth=1 -b ${BRANCH} https://github.com/skybrim/skybrim-macbootstrap
 cd ~/.macbootstrap
 
 # start
-bash main.sh
+sh main.sh

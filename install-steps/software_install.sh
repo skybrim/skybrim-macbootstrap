@@ -6,8 +6,6 @@ if [[ ! -e /Applications/iTerm.app ]]; then
 else
     echo "You have installed iTerm2"
 fi
-# iTerm2 preference json
-sudo cp ~/.macbootstrap/config/Skybrim.json ~/Library/ApplicationSupport/iTerm2/DynamicProfiles 
 
 if [[ ! -e /Applications/fork.app ]]; then
     brew cask install fork
@@ -26,13 +24,6 @@ if [[ ! -e /Applications/qq.app ]]; then
 else
     echo "You have installed qq"
 fi
-
-brew cask install sogouinput
-sogou_base="/usr/local/Caskroom/sogouinput"
-sogou_version="$sogou_base/"`ls "$sogou_base"`
-sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
-open "$sogou_app"
-bash sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     brew cask install google-chrome
@@ -122,8 +113,22 @@ else
     echo "You have installed picgo"
 fi
 
+# sketch
+if [[ ! -e /Applications/sketch.app ]]; then
+    brew cask install sketch
+else
+    echo "You have installed sketch"
+fi
+
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
+
+brew cask install sogouinput
+sogou_base="/usr/local/Caskroom/sogouinput"
+sogou_version="$sogou_base/"`ls "$sogou_base"`
+sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
+open "$sogou_app"
+sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
 # brew cask install proxifier
 # open /Applications/Proxifier.app
