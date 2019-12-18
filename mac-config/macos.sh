@@ -1,5 +1,6 @@
 # Disable guest account
 sudo bash ~/.macbootstrap/mac-config/guest_account.sh disable
+sh ~/.macbootstrap/mac-config/hook_login.sh
 
 # Use F1-F12 as standard function keys
 defaults write -globalDomain com.apple.keyboard.fnState -int 1

@@ -29,7 +29,7 @@
 [user]
 	email = throughskybrim@gmail.com
 	name = skybrim
-	signingkey = 4CD21439715D0A54A595F3A8CFDE0C24A7F2CCEB
+	signingkey = D01670A4FD835EBFBF8300B9C420CE76698779F9
 [commit]
 	gpgsign = true
 [filter "lfs"]

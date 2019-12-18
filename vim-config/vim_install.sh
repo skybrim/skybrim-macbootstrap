@@ -8,5 +8,6 @@
 #ln -s ~/.macbootstrap/zsh-config/.vimrc ~/.vimrc
 #vim +PlugInstall +qall
 
+cd ~
 curl -sLf https://spacevim.org/cn/install.sh | bash
 

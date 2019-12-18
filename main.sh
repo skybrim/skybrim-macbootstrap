@@ -1,8 +1,7 @@
 #!/bin/sh
 source $HOME/.macbootstrap/basic.sh
 
-# 设置 mac (关闭 guest | 隐藏 Docker)
-sudo sh ~/.macbootstrap/mac-config/macos.sh
+
 
 # install v2ray
 brew tap v2ray/v2ray
@@ -14,20 +13,24 @@ ln -s ~/.macbootstrap/net-config/config.json /usr/local/etc/v2ray/config.json
 brew services start v2ray-core
 export ALL_PROXY=socks5://127.0.0.1:10009
 sudo apachectl -t
-ln -s ~/.macbootstrap/net-config/ss.pac /Library/WebServer/Documents/ss.pac
+sudo ln -s ~/.macbootstrap/net-config/ss.pac /Library/WebServer/Documents/ss.pac
 else
     echo "no need to use ss now"
 fi
 
 # start install
-sudo sh ~/.macbootstrap/install-steps/software_install.sh
-sudo sh ~/.macbootstrap/install-steps/terminal_install.sh
+sh ~/.macbootstrap/install-steps/software_install.sh
+sh ~/.macbootstrap/install-steps/terminal_install.sh
 # git config
 sudo sh ~/.macbootstrap/git-config/git_install.sh
-# vim config
-sudo sh ~/.macbootstrap/vim-config/vim_install.sh
 # zsh config
 sudo sh ~/.macbootstrap/zsh-config/zsh_install.sh
+
+# 设置 mac (关闭 guest | 隐藏 Docker)
+sudo sh ~/.macbootstrap/mac-config/macos.sh
+
+# vim config
+sudo sh ~/.macbootstrap/vim-config/vim_install.sh
 
 # 取消代理
 unset ALL_PROXY
