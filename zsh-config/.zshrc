@@ -14,7 +14,7 @@ fi
 
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=true
-export PATH=/usr/local/bin:$PATH
+# export PATH=/usr/local/bin:$PATH
 
 # gpg
 export GPG_TTY=$(tty)

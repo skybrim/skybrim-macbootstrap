@@ -5,7 +5,7 @@ function ip() {
 }
 
 # 打开 Xcode 工程
-function xcode() {
+function xc() {
     if [[ -n "$@" ]]; then
         (cd "$@" && xcode)
     else
@@ -20,7 +20,7 @@ function xcode() {
     fi
 }
 
-function vscode() {
+function vsc() {
     if [ "$#" -eq 0 ]; then
         code .
     elif [ "$#" -eq 1 ]; then
