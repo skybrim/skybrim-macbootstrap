@@ -22,9 +22,11 @@ fi
 sh ~/.macbootstrap/install-steps/software_install.sh
 sh ~/.macbootstrap/install-steps/terminal_install.sh
 # git config
-sudo sh ~/.macbootstrap/git-config/git_install.sh
+sh ~/.macbootstrap/git-config/git_install.sh
 # zsh config
-sudo sh ~/.macbootstrap/zsh-config/zsh_install.sh
+sh ~/.macbootstrap/zsh-config/zsh_install.sh
+# node config
+sh ~/.macbootstrap/node-config/node_install.sh
 
 # 设置 mac (关闭 guest | 隐藏 Docker)
 sudo sh ~/.macbootstrap/mac-config/macos.sh
