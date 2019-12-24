@@ -1,13 +1,13 @@
 export LANG=en_US.UTF-8
 export ZSH=$HOME/.oh-my-zsh
 
-plugins=(git extract encode64 urltools brew zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git extract encode64 urltools brew zsh-syntax-highlighting zsh-autosuggestions safe-paste vi-mode)
 
 ZSH_THEME="spaceship"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.macbootstrap/zsh-config/func.sh
-source /usr/local/etc/profile.d/autojump.sh
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 if brew ls --versions scmpuff > /dev/null; then
     eval "$(scmpuff init -s --aliases=false)"
 fi
