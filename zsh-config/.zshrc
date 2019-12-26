@@ -7,10 +7,12 @@ ZSH_THEME="spaceship"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.macbootstrap/zsh-config/func.sh
+
+# autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-if brew ls --versions scmpuff > /dev/null; then
-    eval "$(scmpuff init -s --aliases=false)"
-fi
+
+# scmpuff
+eval "$(scmpuff init -s)"
 
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=true
@@ -27,3 +29,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+neofetch
