@@ -12,7 +12,7 @@ if not_wiley_network; then
 ln -s ~/.macbootstrap/net-config/config.json /usr/local/etc/v2ray/config.json
 brew services start v2ray-core
 export ALL_PROXY=socks5://127.0.0.1:10009
-sudo apachectl -t
+sudo apachectl start
 sudo ln -s ~/.macbootstrap/net-config/ss.pac /Library/WebServer/Documents/ss.pac
 else
     echo "no need to use ss now"
