@@ -18,6 +18,11 @@ eval "$(scmpuff init -s)"
 export HOMEBREW_NO_AUTO_UPDATE=true
 # export PATH=/usr/local/bin:$PATH
 
+# golang
+export GOPATH=$HOME/Develop/go
+export GOBIN=$GOPATH/bin
+# export PATH=$PATH:${GOPATH//://bin:}/bin
+
 # gpg
 export GPG_TTY=$(tty)
 
