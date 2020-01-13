@@ -21,7 +21,7 @@ export HOMEBREW_NO_AUTO_UPDATE=true
 # golang
 export GOPATH=$HOME/Develop/go
 export GOBIN=$GOPATH/bin
-# export PATH=$PATH:${GOPATH//://bin:}/bin
+export GOPROXY="https://goproxy.cn"
 
 # gpg
 export GPG_TTY=$(tty)
