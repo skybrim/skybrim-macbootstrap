@@ -22,7 +22,7 @@ export HOMEBREW_GITHUB_API_TOKEN=251de1bc5340b7111d92abf6c13d2bff9ff24715
 # golang
 export GOPATH=$HOME/Develop/go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOROOT/bin:$GOBIN
 export GOPROXY="https://goproxy.cn"
 
 # gpg
