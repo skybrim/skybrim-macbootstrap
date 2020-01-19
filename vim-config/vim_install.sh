@@ -10,4 +10,6 @@
 
 cd ~
 curl -sLf https://spacevim.org/cn/install.sh | bash
+backup_file ~/.SpaceVim.d/init.toml
+ln -s ~/.macbootstrap/vim-config/init.toml ~/.SpaceVim.d/init.toml
 
