@@ -22,6 +22,8 @@ else
 fi
 
 brew install python3
+sh ~/.macbootstrap/install-steps/python_install.sh
+
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install redis
 brew install cmake
