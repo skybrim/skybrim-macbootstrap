@@ -19,6 +19,9 @@ export HOMEBREW_NO_AUTO_UPDATE=true
 export HOMEBREW_GITHUB_API_TOKEN=251de1bc5340b7111d92abf6c13d2bff9ff24715
 # export PATH=/usr/local/bin:$PATH
 
+# anaconda
+export PATH=/usr/local/anaconda3/bin:$PATH
+
 # golang
 export GOPATH=$HOME/Develop/go
 export GOBIN=$GOPATH/bin

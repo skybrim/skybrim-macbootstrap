@@ -45,6 +45,12 @@ else
     echo "You have installed vscode"
 fi
 
+# anaconda
+if [[ -e /Applications/Anaconda.app ]]; then
+    echo "You have installed Anaconda"
+else
+    brew cask install anaconda
+fi
 
 # motrix
 if [[ -e /Applications/Motrix.app ]]; then
