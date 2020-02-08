@@ -37,4 +37,4 @@ sudo sh ~/.macbootstrap/vim-config/vim_install.sh
 # 取消代理
 unset ALL_PROXY
 
-# ~/.macbootstrap/install-steps/hook_login.sh
+~/.macbootstrap/install-steps/hook_login.sh
