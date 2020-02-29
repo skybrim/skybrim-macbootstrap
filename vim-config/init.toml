@@ -39,22 +39,6 @@
   default_position = 'top'
   default_height = 30
 
-[[layers]]
-  name = "lang#python"
-  format_on_save = 1
-  python_file_head = [
-    '#!/usr/bin/env python3',
-    '# -*- coding: utf-8 -*-',
-    '',
-    ''
-  ]
-
-[[layers]]
-  name = "format"
-
-[[layers]]
-  name = "debug"
-
 [[custom_plugins]]
   name = 'dracula/vim'
   merged = false

@@ -198,7 +198,8 @@ var domains = [
     //my
     "emby.media",
     "workona.com",
-    "app.gitbook.com"
+    "app.gitbook.com",
+    "djangoproject.com"
 ];
 
 function FindProxyForURL(url, host) {
