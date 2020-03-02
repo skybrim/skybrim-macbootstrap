@@ -2,7 +2,7 @@
   name = "lang#python"
   format_on_save = 1
   python_file_head = [
-    '#!/usr/bin/python3',
+    '# !/usr/bin/python3',
     '# -*- coding: utf-8 -*-',
     '# @Author: Wiley<throughskybrim@gmail.com>',
     '',
