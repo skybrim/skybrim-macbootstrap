@@ -129,6 +129,13 @@ else
     echo "You have installed sketch"
 fi
 
+# cheatsheet
+if [[ ! -e /Applications/cheatsheet.app ]]; then
+    brew cask install cheatsheet
+else
+    echo "You have installed cheatsheet"
+fi
+
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
