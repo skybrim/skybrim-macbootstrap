@@ -48,6 +48,8 @@ brew install yasm
 brew install git-lfs && git lfs install
 $(brew --prefix)/opt/fzf/install --all
 brew install swiftlint
+brew install mysql
+brew install neovim
 
 # Install chisel for debugging in lldb, https://github.com/facebook/chisel
 brew install chisel
