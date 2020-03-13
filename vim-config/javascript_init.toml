@@ -33,19 +33,12 @@
   name = 'autocomplete'
 
 [[layers]]
-  name = "lang#python"
-  format_on_save = 1
-  python_file_head = [
-    '# !/usr/bin/python3',
-    '# -*- coding: utf-8 -*-',
-    '# @Author: Wiley<throughskybrim@gmail.com>',
-    '',
-    '',
-  ]
+  name = "lang#javascript"
 
 [[layers]]
-  name = "debug"
+  name = "format"
 
 [[custom_plugins]]
   name = 'dracula/vim'
   merged = false
+  
