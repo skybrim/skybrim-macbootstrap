@@ -45,6 +45,12 @@ else
     echo "You have installed vscode"
 fi
 
+if [[ ! -e /Applications/youdaonote.app ]]; then
+    brew cask install youdaonote
+else
+    echo "You have installed youdaonote"
+fi
+
 # anaconda
 if [[ -e /Applications/Anaconda.app ]]; then
     echo "You have installed Anaconda"
