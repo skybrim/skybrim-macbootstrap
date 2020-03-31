@@ -58,6 +58,13 @@ else
     brew cask install anaconda
 fi
 
+# pycharm
+if [[ -e /Applications/PyCharm.app ]]; then
+    echo "You have installed PyCharm"
+else
+    brew cask install pycharm
+f
+
 # motrix
 if [[ -e /Applications/Motrix.app ]]; then
     echo "You have installed Motrix"
