@@ -87,10 +87,10 @@ else
 fi
 
 # vlc 播放器
-if [[ ! -e /Applications/vlc.app ]]; then
-    brew cask install vlc
+if [[ ! -e /Applications/IINA.app ]]; then
+    brew cask install iina
 else
-    echo "You have installed vlc"
+    echo "You have installed IINA"
 fi
 
 # Fliqlo 屏保
