@@ -50,7 +50,7 @@ $(brew --prefix)/opt/fzf/install --all
 brew install swiftlint
 brew install mysql
 brew install neovim
-brew install tidy-html5
+brew install lsd
 
 # Install chisel for debugging in lldb, https://github.com/facebook/chisel
 brew install chisel
