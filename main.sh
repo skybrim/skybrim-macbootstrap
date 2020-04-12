@@ -25,6 +25,8 @@ sh ~/.macbootstrap/install-steps/terminal_install.sh
 sh ~/.macbootstrap/git-config/git_install.sh
 # zsh config
 sh ~/.macbootstrap/zsh-config/zsh_install.sh
+# brew install python3
+# sh ~/.macbootstrap/install-steps/python_install.sh
 # node config
 sh ~/.macbootstrap/node-config/node_install.sh
 

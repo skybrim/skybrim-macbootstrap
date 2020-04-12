@@ -57,6 +57,7 @@ if [[ -e /Applications/Anaconda.app ]]; then
 else
     brew cask install anaconda
 fi
+sudo chmod 777 ~/.conda/*
 
 # pycharm
 if [[ -e /Applications/PyCharm.app ]]; then
