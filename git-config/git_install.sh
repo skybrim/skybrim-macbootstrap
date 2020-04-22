@@ -1,8 +1,10 @@
 # link git config
 source $HOME/.macbootstrap/basic.sh
 
-mv ~/.gitconfig ~/.gitconfig_backup
-backup_file ~/.gitattributes
+rm -rf ~/.gitconfig
+rm -rf ~/.gitattributes
+rm -rf ~/.gitignore_global
+
 ln -s ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
 ln -s ~/.macbootstrap/git-config/.gitattributes ~/.gitattributes
 ln -s ~/.macbootstrap/git-config/.gitignore_global ~/.gitignore_global

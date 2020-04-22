@@ -1,8 +1,6 @@
 #!/bin/sh
 source $HOME/.macbootstrap/basic.sh
 
-
-
 # install v2ray
 brew tap v2ray/v2ray
 brew install v2ray-core
@@ -39,4 +37,4 @@ sudo sh ~/.macbootstrap/vim-config/vim_install.sh
 # 取消代理
 unset ALL_PROXY
 
-~/.macbootstrap/install-steps/hook_login.sh
+~/.macbootstrap/mac-config/hook_login.sh

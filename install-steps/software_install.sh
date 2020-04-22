@@ -1,9 +1,6 @@
 # install software
 source $HOME/.macbootstrap/basic.sh
 
-mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
-ln -s ~/.macbootstrap/config/Dracula.xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Dracula.xccolortheme
-
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
 else
