@@ -16,13 +16,13 @@ else
     echo "no need to use ss now"
 fi
 
+# zsh config
+sh ~/.macbootstrap/zsh-config/zsh_install.sh
 # start install
 sh ~/.macbootstrap/install-steps/software_install.sh
 sh ~/.macbootstrap/install-steps/terminal_install.sh
 # git config
 sh ~/.macbootstrap/git-config/git_install.sh
-# zsh config
-sh ~/.macbootstrap/zsh-config/zsh_install.sh
 # brew install python3
 # sh ~/.macbootstrap/install-steps/python_install.sh
 # node config
