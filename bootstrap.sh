@@ -27,6 +27,7 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 # install lastest git
 brew install git
 
+cd ~
 # git clone
 git clone --depth=1 -b ${BRANCH} https://github.com/skybrim/skybrim-macbootstrap.git ~/.macbootstrap
 cd ~/.macbootstrap
