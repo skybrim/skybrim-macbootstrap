@@ -20,6 +20,10 @@ git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
 cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 
+# 替换homebrew-cask.git:
+cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+
 # install lastest git
 brew install git
 

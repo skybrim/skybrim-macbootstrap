@@ -19,7 +19,7 @@ export GPG_TTY=$(tty)
 
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=true
-export HOMEBREW_GITHUB_API_TOKEN=251de1bc5340b7111d92abf6c13d2bff9ff24715
+# export HOMEBREW_GITHUB_API_TOKEN=251de1bc5340b7111d92abf6c13d2bff9ff24715
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 # export PATH=/usr/local/bin:$PATH
 
