@@ -2,30 +2,35 @@
 source $HOME/.macbootstrap/basic.sh
 
 if [[ ! -e /Applications/iTerm.app ]]; then
+    echo ">>>>>>>>>> brew cask install iterm2 <<<<<<<<<<"
     brew cask install iterm2
 else
     echo "You have installed iTerm2"
 fi
 
 if [[ ! -e /Applications/fork.app ]]; then
+    echo ">>>>>>>>>> brew cask install fork <<<<<<<<<<"
     brew cask install fork
 else
     echo "You have installed fork"
 fi
 
 if [[ ! -e /Applications/WeChat.app ]]; then
+    echo ">>>>>>>>>> brew cask install wechat <<<<<<<<<<"
     brew cask install wechat
 else
     echo "You have installed WeChat"
 fi
 
 if [[ ! -e /Applications/qq.app ]]; then
+    echo ">>>>>>>>>> brew cask install qq <<<<<<<<<<"
     brew cask install qq
 else
     echo "You have installed qq"
 fi
 
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
+    echo ">>>>>>>>>> brew cask install google-chrome <<<<<<<<<<"
     brew cask install google-chrome
     # Set Chrome as default browser
     git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
@@ -37,41 +42,37 @@ else
 fi
 
 if [[ ! -e /Applications/Visual\ Studio\ Code.app ]]; then
+    echo ">>>>>>>>>> brew cask install visual-studio-code <<<<<<<<<<"
     brew cask install visual-studio-code
 else
     echo "You have installed vscode"
 fi
 
 if [[ ! -e /Applications/youdaonote.app ]]; then
+    echo ">>>>>>>>>> brew cask install youdaonote <<<<<<<<<<"
     brew cask install youdaonote
 else
     echo "You have installed youdaonote"
 fi
 
-# anaconda
-if [[ -e /Applications/Anaconda.app ]]; then
-    echo "You have installed Anaconda"
+if [[ ! -e /Applications/karabiner-elements.app ]]; then
+    echo ">>>>>>>>>> brew cask install karabiner-elements <<<<<<<<<<"
+    brew cask install karabiner-elements
 else
-    brew cask install anaconda
+    echo "You have installed youdaonote"
 fi
-sudo chmod 777 ~/.conda/*
-
-# pycharm
-if [[ -e /Applications/PyCharm.app ]]; then
-    echo "You have installed PyCharm"
-else
-    brew cask install pycharm
-f
 
 # motrix
-if [[ -e /Applications/Motrix.app ]]; then
-    echo "You have installed Motrix"
-else
+if [[ ! -e /Applications/Motrix.app ]]; then
+    echo ">>>>>>>>>> brew cask install motrix <<<<<<<<<<"
     brew cask install motrix
+else
+    echo "You have installed Motrix"
 fi
 
 # Dash 文档
 if [[ ! -e /Applications/Dash.app ]]; then
+    echo ">>>>>>>>>> brew cask install dash <<<<<<<<<<"
     brew cask install dash
 else
     echo "You have installed dash"
@@ -79,6 +80,7 @@ fi
 
 # alfred 管家工具
 if [[ ! -e /Applications/alfred\ 4.app ]]; then
+    echo ">>>>>>>>>> brew cask install alfred <<<<<<<<<<"
     brew cask install alfred
 else
     echo "You have installed alfred 4"
@@ -86,6 +88,7 @@ fi
 
 # vlc 播放器
 if [[ ! -e /Applications/IINA.app ]]; then
+    echo ">>>>>>>>>> brew cask install iina <<<<<<<<<<"
     brew cask install iina
 else
     echo "You have installed IINA"
@@ -93,6 +96,7 @@ fi
 
 # Fliqlo 屏保
 if [[ ! -e /Applications/Fliqlo.app ]]; then
+    echo ">>>>>>>>>> brew cask install fliqlo <<<<<<<<<<"
     brew cask install fliqlo
 else
     echo "You have installed fliqlo"
@@ -100,6 +104,7 @@ fi
 
 # stretchly 定时休息提醒
 if [[ ! -e /Applications/stretchly.app ]]; then
+    echo ">>>>>>>>>> brew cask install stretchly <<<<<<<<<<"
     brew cask install stretchly
 else
     echo "You have installed stretchly"
@@ -107,6 +112,7 @@ fi
 
 # calibre 电子书工具
 if [[ ! -e /Applications/calibre.app ]]; then
+    echo ">>>>>>>>>> brew cask install calibre <<<<<<<<<<"
     brew cask install calibre
 else
     echo "You have installed calibre"
@@ -114,6 +120,7 @@ fi
 
 # pusher 推送测试工具
 if [[ ! -e /Applications/pusher.app ]]; then
+    echo ">>>>>>>>>> brew cask install pusher <<<<<<<<<<"
     brew cask install pusher
 else
     echo "You have installed pusher"
@@ -121,6 +128,7 @@ fi
 
 # balenaetcher 烧录工具
 if [[ ! -e /Applications/balenaetcher.app ]]; then
+    echo ">>>>>>>>>> brew cask install balenaetcher <<<<<<<<<<"
     brew cask install balenaetcher
 else
     echo "You have installed balenaetcher"
@@ -128,6 +136,7 @@ fi
 
 # picgo 上传图片
 if [[ ! -e /Applications/picgo.app ]]; then
+    echo ">>>>>>>>>> brew cask install picgo <<<<<<<<<<"
     brew cask install picgo
 else
     echo "You have installed picgo"
@@ -135,6 +144,7 @@ fi
 
 # sketch
 if [[ ! -e /Applications/sketch.app ]]; then
+    echo ">>>>>>>>>> brew cask install sketch <<<<<<<<<<"
     brew cask install sketch
 else
     echo "You have installed sketch"
@@ -142,14 +152,17 @@ fi
 
 # cheatsheet
 if [[ ! -e /Applications/cheatsheet.app ]]; then
+    echo ">>>>>>>>>> brew cask install cheatsheet <<<<<<<<<<"
     brew cask install cheatsheet
 else
     echo "You have installed cheatsheet"
 fi
 
+echo ">>>>>>>>>> brew tap homebrew/cask-fonts <<<<<<<<<<"
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
+echo ">>>>>>>>>> brew cask install sogouinput <<<<<<<<<<"
 brew cask install sogouinput
 sogou_base="/usr/local/Caskroom/sogouinput"
 sogou_version="$sogou_base/"`ls "$sogou_base"`
