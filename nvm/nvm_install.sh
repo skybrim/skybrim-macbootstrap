@@ -1,3 +1,11 @@
+source $HOME/.macbootstrap/basic.sh
+
+
+# nvm
+echo ">>>>>>>>>> nvm install <<<<<<<<<<"
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+# nvm install node
+
 # npm config -g set registry https://registry.npm.taobao.org
 
 # npm install -g gnomon
