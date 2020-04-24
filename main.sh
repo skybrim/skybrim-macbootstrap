@@ -27,8 +27,8 @@ echo ">>>>>>>>>> software_install run<<<<<<<<<<"
 sh ~/.macbootstrap/install-steps/software_install.sh
 
 # git config
-echo ">>>>>>>>>> git_install run <<<<<<<<<<"
-sh ~/.macbootstrap/git-config/git_install.sh
+echo ">>>>>>>>>> git_init run <<<<<<<<<<"
+sh ~/.macbootstrap/git-config/git_init.sh
 
 # python
 echo ">>>>>>>>>> python_install run <<<<<<<<<<"
