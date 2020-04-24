@@ -1,9 +1,4 @@
 
-function ip() {
-    network=`current_networkservice`
-    networksetup -getinfo $network | grep '^IP address' | awk -F: '{print $2}' | sed 's/ //g'
-}
-
 # 打开 Xcode 工程
 function xc() {
     if [[ -n "$@" ]]; then
