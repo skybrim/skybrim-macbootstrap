@@ -179,15 +179,7 @@ else
     echo "You have installed xversion"
 fi
 
-# Xversion
-if [[ ! -e /Applications/XMind.app ]]; then
-    echo ">>>>>>>>>> brew cask install xmind-zen <<<<<<<<<<"
-    brew cask install xmind-zen
-else
-    echo "You have installed xmind-zen"
-fi
-
-# Xversion
+# spectacle
 if [[ ! -e /Applications/Spectacle.app ]]; then
     echo ">>>>>>>>>> brew cask install spectacle <<<<<<<<<<"
     brew cask install spectacle
