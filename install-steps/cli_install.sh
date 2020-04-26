@@ -1,6 +1,9 @@
 # terminal package install
 source $HOME/.macbootstrap/basic.sh
 
+echo ">>>>>>>>>> brew install git <<<<<<<<<<"
+brew install git
+
 echo ">>>>>>>>>> brew install python3 <<<<<<<<<<"
 brew install python3
 

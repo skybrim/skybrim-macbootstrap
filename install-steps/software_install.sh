@@ -86,7 +86,7 @@ else
     echo "You have installed alfred 4"
 fi
 
-# vlc 播放器
+# IINA 播放器
 if [[ ! -e /Applications/IINA.app ]]; then
     echo ">>>>>>>>>> brew cask install iina <<<<<<<<<<"
     brew cask install iina
@@ -102,22 +102,6 @@ else
     echo "You have installed fliqlo"
 fi
 
-# stretchly 定时休息提醒
-if [[ ! -e /Applications/stretchly.app ]]; then
-    echo ">>>>>>>>>> brew cask install stretchly <<<<<<<<<<"
-    brew cask install stretchly
-else
-    echo "You have installed stretchly"
-fi
-
-# calibre 电子书工具
-if [[ ! -e /Applications/calibre.app ]]; then
-    echo ">>>>>>>>>> brew cask install calibre <<<<<<<<<<"
-    brew cask install calibre
-else
-    echo "You have installed calibre"
-fi
-
 # pusher 推送测试工具
 if [[ ! -e /Applications/pusher.app ]]; then
     echo ">>>>>>>>>> brew cask install pusher <<<<<<<<<<"
@@ -125,6 +109,26 @@ if [[ ! -e /Applications/pusher.app ]]; then
 else
     echo "You have installed pusher"
 fi
+
+# cheatsheet
+if [[ ! -e /Applications/cheatsheet.app ]]; then
+    echo ">>>>>>>>>> brew cask install cheatsheet <<<<<<<<<<"
+    brew cask install cheatsheet
+else
+    echo "You have installed cheatsheet"
+fi
+
+echo ">>>>>>>>>> brew tap homebrew/cask-fonts <<<<<<<<<<"
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+
+echo ">>>>>>>>>> brew cask install sogouinput <<<<<<<<<<"
+brew cask install sogouinput
+sogou_base="/usr/local/Caskroom/sogouinput"
+sogou_version="$sogou_base/"`ls "$sogou_base"`
+sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
+open "$sogou_app"
+sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
 # balenaetcher 烧录工具
 if [[ ! -e /Applications/balenaetcher.app ]]; then
@@ -150,25 +154,46 @@ else
     echo "You have installed sketch"
 fi
 
-# cheatsheet
-if [[ ! -e /Applications/cheatsheet.app ]]; then
-    echo ">>>>>>>>>> brew cask install cheatsheet <<<<<<<<<<"
-    brew cask install cheatsheet
+# stretchly 定时休息提醒
+if [[ ! -e /Applications/stretchly.app ]]; then
+    echo ">>>>>>>>>> brew cask install stretchly <<<<<<<<<<"
+    brew cask install stretchly
 else
-    echo "You have installed cheatsheet"
+    echo "You have installed stretchly"
 fi
 
-echo ">>>>>>>>>> brew tap homebrew/cask-fonts <<<<<<<<<<"
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+# calibre 电子书工具
+if [[ ! -e /Applications/calibre.app ]]; then
+    echo ">>>>>>>>>> brew cask install calibre <<<<<<<<<<"
+    brew cask install calibre
+else
+    echo "You have installed calibre"
+fi
 
-echo ">>>>>>>>>> brew cask install sogouinput <<<<<<<<<<"
-brew cask install sogouinput
-sogou_base="/usr/local/Caskroom/sogouinput"
-sogou_version="$sogou_base/"`ls "$sogou_base"`
-sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
-open "$sogou_app"
-sh ~/.macbootstrap/install-steps/sogou_sync.sh
+# Xversion
+if [[ ! -e /Applications/xversion.app ]]; then
+    echo ">>>>>>>>>> brew cask install Xversion <<<<<<<<<<"
+    ln -s ~/.macbootstrap/install-steps/homebrew_cask_rb/xversion.rb /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/xversion.rb
+    brew cask install xversion
+else
+    echo "You have installed xversion"
+fi
+
+# Xversion
+if [[ ! -e /Applications/XMind.app ]]; then
+    echo ">>>>>>>>>> brew cask install xmind-zen <<<<<<<<<<"
+    brew cask install xmind-zen
+else
+    echo "You have installed xmind-zen"
+fi
+
+# Xversion
+if [[ ! -e /Applications/Spectacle.app ]]; then
+    echo ">>>>>>>>>> brew cask install spectacle <<<<<<<<<<"
+    brew cask install spectacle
+else
+    echo "You have installed spectacle"
+fi
 
 # brew cask install proxifier
 # open /Applications/Proxifier.app

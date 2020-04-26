@@ -7,14 +7,10 @@ fi
 
 # install brew
 if [[ ! -e /usr/local/bin/brew ]]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
   echo ">>>>>>>>>> You have installed brew <<<<<<<<<<"
 fi
-
-# install lastest git
-echo ">>>>>>>>>> brew install git <<<<<<<<<<"
-brew install git
 
 cd ~
 # git clone
