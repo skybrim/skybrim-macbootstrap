@@ -187,6 +187,14 @@ else
     echo "You have installed spectacle"
 fi
 
+# hwsensors
+if [[ ! -e /Applications/hwsensors.app ]]; then
+    echo ">>>>>>>>>> brew cask install hwsensors <<<<<<<<<<"
+    brew cask install hwsensors
+else
+    echo "You have installed hwsensors"
+fi
+
 # brew cask install proxifier
 # open /Applications/Proxifier.app
 # defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
