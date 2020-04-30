@@ -4,9 +4,8 @@ source $HOME/.macbootstrap/basic.sh
 # nvm
 echo ">>>>>>>>>> nvm install <<<<<<<<<<"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-# nvm install node
-
-# npm config -g set registry https://registry.npm.taobao.org
+nvm install node
+npm config -g set registry https://registry.npm.taobao.org
 
 # npm install -g gnomon
 # npm install -g vue-cli
