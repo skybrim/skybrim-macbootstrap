@@ -93,7 +93,7 @@ brew install mysql
 echo ">>>>>>>>>> brew install mongodb <<<<<<<<<<"
 brew tap mongodb/brew
 brew install mongodb-community
-brew install mongodb-community-shell
+# brew install mongodb-community-shell
 
 echo ">>>>>>>>>> brew install neovim <<<<<<<<<<"
 brew install neovim
