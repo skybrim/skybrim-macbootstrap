@@ -130,6 +130,14 @@ sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
 open "$sogou_app"
 sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
+# MonitorControl
+if [[ ! -e /Applications/MonitorControl.app ]]; then
+    echo ">>>>>>>>>> brew cask install MonitorControl <<<<<<<<<<"
+    brew cask install MonitorControl
+else
+    echo "You have installed MonitorControl"
+fi
+
 # balenaetcher 烧录工具
 if [[ ! -e /Applications/balenaetcher.app ]]; then
     echo ">>>>>>>>>> brew cask install balenaetcher <<<<<<<<<<"

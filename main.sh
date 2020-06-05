@@ -32,11 +32,11 @@ sh ~/.macbootstrap/git-config/git_init.sh
 
 # python
 echo ">>>>>>>>>> python_install run <<<<<<<<<<"
-sh ~/.macbootstrap/install-steps/python_install.sh
+sh ~/.macbootstrap/python/python_install.sh
 
 # nvm config
 echo ">>>>>>>>>> nvm_install run <<<<<<<<<<"
-sh ~/.macbootstrap/node-config/nvm_install.sh
+sh ~/.macbootstrap/nvm/nvm_install.sh
 
 # 设置 mac (关闭 guest | 隐藏 Docker)
 echo ">>>>>>>>>> mac setting run <<<<<<<<<<"

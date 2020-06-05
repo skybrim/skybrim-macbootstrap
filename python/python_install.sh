@@ -1,13 +1,10 @@
 source $HOME/.macbootstrap/basic.sh
 
 
-# anaconda
-if [[ ! -e /Applications/Anaconda.app ]]; then
-    echo ">>>>>>>>>> brew cask install anaconda <<<<<<<<<<"
-    brew cask install anaconda
-else
-    echo "You have installed Anaconda"
-fi
+# miniconda
+echo ">>>>>>>>>> brew cask install miniconda <<<<<<<<<<"
+brew cask install anaconda
+conda init zsh
 sudo chmod 777 ~/.conda/*
 
 # pycharm
