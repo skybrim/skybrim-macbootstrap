@@ -117,10 +117,10 @@ brew cask install --appdir='/usr/local/bin' qlimagesize qlvideo # Avoid password
 
 # Gem update
 echo ">>>>>>>>>> Gem update <<<<<<<<<<"
-gem sources --remove https://rubygems.org/  #移除默认源
-gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源
+brew install ruby
+sudo gem sources --remove https://rubygems.org/  #移除默认源
+sudo gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源
 sudo gem update 
 sudo gem install -n /usr/local/bin cocoapods
 sudo gem install -n /usr/local/bin cocoapods-plugins
-sudo gem install colored
-
+# sudo gem install colored
