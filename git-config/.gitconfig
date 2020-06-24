@@ -11,7 +11,7 @@
     excludesfile = ~/.gitignore_global
     whitespace = cr-at-eol
     quotepath = false
-    editor = /usr/local/Cellar/vim/8.1.1800
+  	editor = vim
     attributesfile = ~/.gitattributes
 [i18n]
     commitencoding = utf-8
@@ -37,3 +37,9 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[diff]
+	tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE

@@ -199,7 +199,16 @@ var domains = [
     "emby.media",
     "workona.com",
     "app.gitbook.com",
-    "djangoproject.com"
+    "djangoproject.com",
+    "bandwagonhost.com",
+    "gist.github.com",
+    "fontsquirrel.com",
+    "github.com",
+    "blog.xjn819.com",
+    "reddit.com",
+    "guide.v2fly.org",
+    "reactnative.cn",
+    "developer.apple.com"
 ];
 
 function FindProxyForURL(url, host) {
