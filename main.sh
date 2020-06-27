@@ -9,7 +9,7 @@ brew install v2ray-core
 if not_wiley_network; then
 ln -s ~/.macbootstrap/net-config/config.json /usr/local/etc/v2ray/config.json
 brew services start v2ray-core
-export all_proxy=socks5://127.0.0.1:10009 http_proxy=socks5://127.0.0.1:10009 https_proxy=socks5://127.0.0.1:10009
+export all_proxy=socks5://127.0.0.1:10009
 sudo apachectl start
 sudo ln -s ~/.macbootstrap/net-config/ss.pac /Library/WebServer/Documents/ss.pac
 else
