@@ -8,6 +8,8 @@ ZSH_THEME="spaceship"
 source $ZSH/oh-my-zsh.sh
 source ~/.macbootstrap/zsh-config/func.sh
 source ~/.macbootstrap/zsh-config/alias.sh
+source ~/.macbootstrap/basic.sh
+
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 

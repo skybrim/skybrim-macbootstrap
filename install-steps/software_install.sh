@@ -55,13 +55,6 @@ else
     echo "You have installed youdaonote"
 fi
 
-if [[ ! -e /Applications/karabiner-elements.app ]]; then
-    echo ">>>>>>>>>> brew cask install karabiner-elements <<<<<<<<<<"
-    brew cask install karabiner-elements
-else
-    echo "You have installed youdaonote"
-fi
-
 # motrix
 if [[ ! -e /Applications/Motrix.app ]]; then
     echo ">>>>>>>>>> brew cask install motrix <<<<<<<<<<"
@@ -213,4 +206,12 @@ fi
 #     echo "You have installed charles"
 # else
 #     brew cask install charles
+# fi
+
+
+# if [[ ! -e /Applications/karabiner-elements.app ]]; then
+#     echo ">>>>>>>>>> brew cask install karabiner-elements <<<<<<<<<<"
+#     brew cask install karabiner-elements
+# else
+#     echo "You have installed youdaonote"
 # fi

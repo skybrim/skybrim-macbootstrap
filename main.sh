@@ -48,4 +48,4 @@ sudo sh ~/.macbootstrap/mac-config/macos.sh
 
 # 开机脚本
 echo ">>>>>>>>>> hook_login run <<<<<<<<<<"
-~/.macbootstrap/mac-config/hook_login.sh
+sh ~/.macbootstrap/mac-config/hook_login.sh
