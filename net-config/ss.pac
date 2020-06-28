@@ -204,6 +204,7 @@ var domains = [
     "gist.github.com",
     "fontsquirrel.com",
     "github.com",
+    "github.io",
     "blog.xjn819.com",
     "reddit.com",
     "guide.v2fly.org",
