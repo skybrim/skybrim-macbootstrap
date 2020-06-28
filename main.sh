@@ -5,16 +5,16 @@ source $HOME/.macbootstrap/basic.sh
 brew tap v2ray/v2ray
 brew install v2ray-core
 
-# 是否需要开启 v2ray
-if not_wiley_network; then
+# 关联 v2ray 配置文件
 ln -s ~/.macbootstrap/net-config/config.json /usr/local/etc/v2ray/config.json
-brew services start v2ray-core
-export all_proxy=socks5://127.0.0.1:10009 http_proxy=socks5://127.0.0.1:10009 https_proxy=socks5://127.0.0.1:10009
-sudo apachectl start
+# 关联本地 pac 文件
 sudo ln -s ~/.macbootstrap/net-config/ss.pac /Library/WebServer/Documents/ss.pac
-else
-    echo ">>>>>>>>>> no need to use ss now <<<<<<<<<<"
-fi
+# 终端开启代理
+# export all_proxy=socks5://127.0.0.1:10009
+# 终端取消代理
+# unset ALL_PROXY
+# sudo apachectl start
+# brew services start v2ray-core
 
 # zsh config
 echo ">>>>>>>>>> zsh_install run <<<<<<<<<<"
@@ -38,16 +38,13 @@ sh ~/.macbootstrap/python/python_install.sh
 echo ">>>>>>>>>> nvm_install run <<<<<<<<<<"
 sh ~/.macbootstrap/nvm/nvm_install.sh
 
-# 设置 mac (关闭 guest | 隐藏 Docker)
-echo ">>>>>>>>>> mac setting run <<<<<<<<<<"
-sudo sh ~/.macbootstrap/mac-config/macos.sh
-
 # vim config
 echo ">>>>>>>>>> vim setting run <<<<<<<<<<"
 sudo sh ~/.macbootstrap/vim-config/vim_install.sh
 
-# 取消代理
-unset ALL_PROXY
+# 设置 mac (关闭 guest | 隐藏 Docker)
+echo ">>>>>>>>>> mac setting run <<<<<<<<<<"
+sudo sh ~/.macbootstrap/mac-config/macos.sh
 
 # 开机脚本
 echo ">>>>>>>>>> hook_login run <<<<<<<<<<"

@@ -1,8 +1,7 @@
 source $HOME/.macbootstrap/basic.sh
 
-
 # miniconda
-echo ">>>>>>>>>> brew cask install miniconda <<<<<<<<<<"
+echo ">>>>>>>>>> brew cask install anaconda <<<<<<<<<<"
 brew cask install anaconda
 conda init zsh
 sudo chmod 777 ~/.conda/*

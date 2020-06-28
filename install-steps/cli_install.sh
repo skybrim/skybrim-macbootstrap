@@ -4,9 +4,6 @@ source $HOME/.macbootstrap/basic.sh
 echo ">>>>>>>>>> brew install git <<<<<<<<<<"
 brew install git
 
-echo ">>>>>>>>>> brew install python3 <<<<<<<<<<"
-brew install python3
-
 echo ">>>>>>>>>> brew install gnu-sed <<<<<<<<<<"
 brew install gnu-sed
 
@@ -85,7 +82,6 @@ brew install git-lfs && git lfs install
 
 echo ">>>>>>>>>> brew install swiftlint <<<<<<<<<<"
 brew install swiftlint
-
 
 echo ">>>>>>>>>> brew install mysql <<<<<<<<<<"
 brew install mysql
