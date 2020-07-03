@@ -8,6 +8,7 @@ defaults write -globalDomain com.apple.keyboard.fnState -int 1
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # dock setting
+# https://developer.apple.com/documentation/devicemanagement/dock
 # Auto hide and show Dock
 defaults write com.apple.dock autohide true
 defaults write com.apple.dock autohide-time-modifier 0
