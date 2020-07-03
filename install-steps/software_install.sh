@@ -123,14 +123,6 @@ sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
 open "$sogou_app"
 sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
-# MonitorControl
-if [[ ! -e /Applications/MonitorControl.app ]]; then
-    echo ">>>>>>>>>> brew cask install MonitorControl <<<<<<<<<<"
-    brew cask install MonitorControl
-else
-    echo "You have installed MonitorControl"
-fi
-
 # balenaetcher 烧录工具
 if [[ ! -e /Applications/balenaetcher.app ]]; then
     echo ">>>>>>>>>> brew cask install balenaetcher <<<<<<<<<<"
@@ -145,14 +137,6 @@ if [[ ! -e /Applications/picgo.app ]]; then
     brew cask install picgo
 else
     echo "You have installed picgo"
-fi
-
-# sketch
-if [[ ! -e /Applications/sketch.app ]]; then
-    echo ">>>>>>>>>> brew cask install sketch <<<<<<<<<<"
-    brew cask install sketch
-else
-    echo "You have installed sketch"
 fi
 
 # stretchly 定时休息提醒
@@ -188,14 +172,6 @@ else
     echo "You have installed spectacle"
 fi
 
-# hwsensors
-if [[ ! -e /Applications/hwsensors.app ]]; then
-    echo ">>>>>>>>>> brew cask install hwsensors <<<<<<<<<<"
-    brew cask install hwsensors
-else
-    echo "You have installed hwsensors"
-fi
-
 # brew cask install proxifier
 # open /Applications/Proxifier.app
 # defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
@@ -214,4 +190,12 @@ fi
 #     brew cask install karabiner-elements
 # else
 #     echo "You have installed youdaonote"
+# fi
+
+# sketch
+# if [[ ! -e /Applications/sketch.app ]]; then
+#     echo ">>>>>>>>>> brew cask install sketch <<<<<<<<<<"
+#     brew cask install sketch
+# else
+#     echo "You have installed sketch"
 # fi

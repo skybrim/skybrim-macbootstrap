@@ -44,7 +44,7 @@ sudo sh ~/.macbootstrap/vim-config/vim_install.sh
 
 # 设置 mac (关闭 guest | 隐藏 Docker)
 echo ">>>>>>>>>> mac setting run <<<<<<<<<<"
-sudo sh ~/.macbootstrap/mac-config/macos.sh
+sh ~/.macbootstrap/mac-config/macos.sh
 
 # 开机脚本
 echo ">>>>>>>>>> hook_login run <<<<<<<<<<"
