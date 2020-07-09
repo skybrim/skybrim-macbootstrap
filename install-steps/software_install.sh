@@ -48,6 +48,14 @@ else
     echo "You have installed vscode"
 fi
 
+
+if [[ ! -e /Applications/CodeRunner.app ]]; then
+    echo ">>>>>>>>>> brew cask install coderunner <<<<<<<<<<"
+    brew cask install coderunner
+else
+    echo "You have installed coderunner"
+fi
+
 if [[ ! -e /Applications/youdaonote.app ]]; then
     echo ">>>>>>>>>> brew cask install youdaonote <<<<<<<<<<"
     brew cask install youdaonote

@@ -25,6 +25,9 @@ brew install redis
 echo ">>>>>>>>>> brew install cmake <<<<<<<<<<"
 brew install cmake
 
+echo ">>>>>>>>>> brew install ninja <<<<<<<<<<"
+brew install ninja
+
 echo ">>>>>>>>>> brew install gawk <<<<<<<<<<"
 brew install gawk
 
