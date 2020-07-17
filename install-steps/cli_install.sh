@@ -92,6 +92,9 @@ brew install swiftlint
 echo ">>>>>>>>>> brew install mysql <<<<<<<<<<"
 brew install mysql
 
+echo ">>>>>>>>>> brew install mitmproxy <<<<<<<<<<"
+brew install mitmproxy
+
 echo ">>>>>>>>>> brew install mongodb <<<<<<<<<<"
 brew tap mongodb/brew
 brew install mongodb-community

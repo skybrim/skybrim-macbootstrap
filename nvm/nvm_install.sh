@@ -12,6 +12,12 @@ ln -s $(which node) /usr/local/bin/node
 
 # npm config -g set registry https://registry.npm.taobao.org
 
+# hexo
+# npm install -g hexo-cli
+
+# whistle 抓包工具
+# npm install -g whistle
+
 # npm install -g gnomon
 # npm install -g vue-cli
 # npm install -g es-checker
@@ -19,5 +25,4 @@ ln -s $(which node) /usr/local/bin/node
 # npm install -g bash-language-server
 # npm install -g eslint-plugin-html
 # npm install -g js-beautify
-# npm install -g hexo-cli
 # npm install -g eslint
