@@ -1,9 +1,8 @@
 source $HOME/.macbootstrap/basic.sh
 
-rm -rf ~/.oh-my-zsh
 if [[ ! -e ~/.oh-my-zsh ]]; then
     echo ">>>>>>>>>> oh-my-zsh download <<<<<<<<<<"
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 # zshrc setup
