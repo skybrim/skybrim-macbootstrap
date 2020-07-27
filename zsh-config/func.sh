@@ -15,6 +15,7 @@ function xc() {
     fi
 }
 
+# vscode 打开目录
 function vsc() {
     if [ "$#" -eq 0 ]; then
         code .
