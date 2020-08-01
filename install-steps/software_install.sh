@@ -103,6 +103,14 @@ else
     echo "You have installed fliqlo"
 fi
 
+# robo-3t
+if [[ ! -e /Applications/Robo\ 3T.app ]]; then
+    echo ">>>>>>>>>> brew cask install robo-3t <<<<<<<<<<"
+    brew cask install robo-3t
+else
+    echo "You have installed robo-3t"
+fi
+
 # pusher 推送测试工具
 if [[ ! -e /Applications/pusher.app ]]; then
     echo ">>>>>>>>>> brew cask install pusher <<<<<<<<<<"
