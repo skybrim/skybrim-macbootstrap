@@ -13,3 +13,12 @@ if [[ ! -e /Applications/PyCharm.app ]]; then
 else
     echo "You have installed PyCharm"
 fi
+
+# spider
+# pip install requests
+# pip install pyquery
+# pip install pymongo
+# pip install selenium
+# pip install aiohttp
+# pip install pyppeteer
+# pyppeteer-install

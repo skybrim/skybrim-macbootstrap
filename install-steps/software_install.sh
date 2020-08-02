@@ -111,6 +111,9 @@ else
     echo "You have installed robo-3t"
 fi
 
+echo ">>>>>>>>>> brew cask install chromedriver <<<<<<<<<<"
+brew cask install chromedriver
+
 # pusher 推送测试工具
 if [[ ! -e /Applications/pusher.app ]]; then
     echo ">>>>>>>>>> brew cask install pusher <<<<<<<<<<"
