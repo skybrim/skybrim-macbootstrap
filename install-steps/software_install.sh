@@ -111,6 +111,14 @@ else
     echo "You have installed robo-3t"
 fi
 
+# robo-3t
+if [[ ! -e /Applications/Docker.app ]]; then
+    echo ">>>>>>>>>> brew cask install Docker <<<<<<<<<<"
+    brew cask install docker
+else
+    echo "You have installed robo-3t"
+fi
+
 echo ">>>>>>>>>> brew cask install chromedriver <<<<<<<<<<"
 brew cask install chromedriver
 

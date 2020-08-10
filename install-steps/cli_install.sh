@@ -22,9 +22,6 @@ brew install coreutils
 echo ">>>>>>>>>> brew install --HEAD universal-ctags/universal-ctags/universal-ctags <<<<<<<<<<"
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
-echo ">>>>>>>>>> brew install redis <<<<<<<<<<"
-brew install redis
-
 echo ">>>>>>>>>> brew install cmake <<<<<<<<<<"
 brew install cmake
 
@@ -92,16 +89,8 @@ brew install git-lfs && git lfs install
 echo ">>>>>>>>>> brew install swiftlint <<<<<<<<<<"
 brew install swiftlint
 
-echo ">>>>>>>>>> brew install mysql <<<<<<<<<<"
-brew install mysql
-
 echo ">>>>>>>>>> brew install mitmproxy <<<<<<<<<<"
 brew install mitmproxy
-
-echo ">>>>>>>>>> brew install mongodb <<<<<<<<<<"
-brew tap mongodb/brew
-brew install mongodb-community
-# brew install mongodb-community-shell
 
 echo ">>>>>>>>>> brew install neovim <<<<<<<<<<"
 brew install neovim
