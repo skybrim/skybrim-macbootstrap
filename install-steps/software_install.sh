@@ -8,13 +8,6 @@ else
     echo "You have installed iTerm2"
 fi
 
-if [[ ! -e /Applications/fork.app ]]; then
-    echo ">>>>>>>>>> brew cask install fork <<<<<<<<<<"
-    brew cask install fork
-else
-    echo "You have installed fork"
-fi
-
 if [[ ! -e /Applications/WeChat.app ]]; then
     echo ">>>>>>>>>> brew cask install wechat <<<<<<<<<<"
     brew cask install wechat
@@ -41,13 +34,30 @@ else
     echo "You have installed chrome"
 fi
 
+# fork
+if [[ ! -e /Applications/fork.app ]]; then
+    echo ">>>>>>>>>> brew cask install fork <<<<<<<<<<"
+    brew cask install fork
+else
+    echo "You have installed fork"
+fi
+
+# Xversion
+if [[ ! -e /Applications/xversion.app ]]; then
+    echo ">>>>>>>>>> brew cask install Xversion <<<<<<<<<<"
+    ln -s ~/.macbootstrap/install-steps/homebrew_cask_rb/xversion.rb /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/xversion.rb
+    brew cask install xversion
+else
+    echo "You have installed xversion"
+fi
+
+# VSCode
 if [[ ! -e /Applications/Visual\ Studio\ Code.app ]]; then
     echo ">>>>>>>>>> brew cask install visual-studio-code <<<<<<<<<<"
     brew cask install visual-studio-code
 else
     echo "You have installed vscode"
 fi
-
 
 if [[ ! -e /Applications/CodeRunner.app ]]; then
     echo ">>>>>>>>>> brew cask install coderunner <<<<<<<<<<"
@@ -61,14 +71,6 @@ if [[ ! -e /Applications/youdaonote.app ]]; then
     brew cask install youdaonote
 else
     echo "You have installed youdaonote"
-fi
-
-# motrix
-if [[ ! -e /Applications/Motrix.app ]]; then
-    echo ">>>>>>>>>> brew cask install motrix <<<<<<<<<<"
-    brew cask install motrix
-else
-    echo "You have installed Motrix"
 fi
 
 # Dash 文档
@@ -103,15 +105,15 @@ else
     echo "You have installed fliqlo"
 fi
 
-# robo-3t
-if [[ ! -e /Applications/Robo\ 3T.app ]]; then
-    echo ">>>>>>>>>> brew cask install robo-3t <<<<<<<<<<"
-    brew cask install robo-3t
+# tableplus
+if [[ ! -e /Applications/tableplus.app ]]; then
+    echo ">>>>>>>>>> brew cask install tableplus <<<<<<<<<<"
+    brew cask install tableplus
 else
-    echo "You have installed robo-3t"
+    echo "You have installed tableplus"
 fi
 
-# robo-3t
+# docker
 if [[ ! -e /Applications/Docker.app ]]; then
     echo ">>>>>>>>>> brew cask install Docker <<<<<<<<<<"
     brew cask install docker
@@ -150,14 +152,6 @@ sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
 open "$sogou_app"
 sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
-# balenaetcher 烧录工具
-if [[ ! -e /Applications/balenaetcher.app ]]; then
-    echo ">>>>>>>>>> brew cask install balenaetcher <<<<<<<<<<"
-    brew cask install balenaetcher
-else
-    echo "You have installed balenaetcher"
-fi
-
 # picgo 上传图片
 if [[ ! -e /Applications/picgo.app ]]; then
     echo ">>>>>>>>>> brew cask install picgo <<<<<<<<<<"
@@ -166,38 +160,54 @@ else
     echo "You have installed picgo"
 fi
 
-# stretchly 定时休息提醒
-if [[ ! -e /Applications/stretchly.app ]]; then
-    echo ">>>>>>>>>> brew cask install stretchly <<<<<<<<<<"
-    brew cask install stretchly
+if [[ ! -e /Applications/The\ Unarchiver.app ]]; then
+    echo ">>>>>>>>>> brew cask install the-unarchiver <<<<<<<<<<"
+    brew cask install the-unarchiver
 else
-    echo "You have installed stretchly"
+    echo "You have installed the-unarchiver"
 fi
+
+brew cask install the-unarchiver
 
 # calibre 电子书工具
-if [[ ! -e /Applications/calibre.app ]]; then
-    echo ">>>>>>>>>> brew cask install calibre <<<<<<<<<<"
-    brew cask install calibre
-else
-    echo "You have installed calibre"
-fi
+# if [[ ! -e /Applications/calibre.app ]]; then
+#     echo ">>>>>>>>>> brew cask install calibre <<<<<<<<<<"
+#     brew cask install calibre
+# else
+#     echo "You have installed calibre"
+# fi
 
-# Xversion
-if [[ ! -e /Applications/xversion.app ]]; then
-    echo ">>>>>>>>>> brew cask install Xversion <<<<<<<<<<"
-    ln -s ~/.macbootstrap/install-steps/homebrew_cask_rb/xversion.rb /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/xversion.rb
-    brew cask install xversion
-else
-    echo "You have installed xversion"
-fi
+# balenaetcher 烧录工具
+# if [[ ! -e /Applications/balenaetcher.app ]]; then
+#     echo ">>>>>>>>>> brew cask install balenaetcher <<<<<<<<<<"
+#     brew cask install balenaetcher
+# else
+#     echo "You have installed balenaetcher"
+# fi
+
+# motrix
+# if [[ ! -e /Applications/Motrix.app ]]; then
+#     echo ">>>>>>>>>> brew cask install motrix <<<<<<<<<<"
+#     brew cask install motrix
+# else
+#     echo "You have installed Motrix"
+# fi
 
 # spectacle
-if [[ ! -e /Applications/Spectacle.app ]]; then
-    echo ">>>>>>>>>> brew cask install spectacle <<<<<<<<<<"
-    brew cask install spectacle
-else
-    echo "You have installed spectacle"
-fi
+# if [[ ! -e /Applications/Spectacle.app ]]; then
+#     echo ">>>>>>>>>> brew cask install spectacle <<<<<<<<<<"
+#     brew cask install spectacle
+# else
+#     echo "You have installed spectacle"
+# fi
+
+# stretchly 定时休息提醒
+# if [[ ! -e /Applications/stretchly.app ]]; then
+#     echo ">>>>>>>>>> brew cask install stretchly <<<<<<<<<<"
+#     brew cask install stretchly
+# else
+#     echo "You have installed stretchly"
+# fi
 
 # brew cask install proxifier
 # open /Applications/Proxifier.app
@@ -211,12 +221,11 @@ fi
 #     brew cask install charles
 # fi
 
-
 # if [[ ! -e /Applications/karabiner-elements.app ]]; then
 #     echo ">>>>>>>>>> brew cask install karabiner-elements <<<<<<<<<<"
 #     brew cask install karabiner-elements
 # else
-#     echo "You have installed youdaonote"
+#     echo "You have installed karabiner-elements"
 # fi
 
 # sketch
@@ -225,4 +234,12 @@ fi
 #     brew cask install sketch
 # else
 #     echo "You have installed sketch"
+# fi
+
+# robo-3t
+# if [[ ! -e /Applications/Robo\ 3T.app ]]; then
+#     echo ">>>>>>>>>> brew cask install robo-3t <<<<<<<<<<"
+#     brew cask install robo-3t
+# else
+#     echo "You have installed robo-3t"
 # fi
