@@ -7,6 +7,16 @@ brew install git
 echo ">>>>>>>>>> brew install lazygit <<<<<<<<<<"
 brew install jesseduffield/lazygit/lazygit
 
+echo ">>>>>>>>>> brew install mongodb <<<<<<<<<<"
+brew tap mongodb/brew
+brew install mongodb/brew/mongodb-community
+
+echo ">>>>>>>>>> brew install mysql <<<<<<<<<<"
+brew install mysql
+
+echo ">>>>>>>>>> brew install redis <<<<<<<<<<"
+brew install redis
+
 echo ">>>>>>>>>> brew install coreutils <<<<<<<<<<"
 brew install coreutils
 
@@ -113,5 +123,5 @@ cp ~/.macbootstrap/config/.lldbinit ~/.lldbinit
 # echo ">>>>>>>>>> brew install the_silver_searcher <<<<<<<<<<"
 # brew install the_silver_searcher
 
-echo ">>>>>>>>>> brew install ranger <<<<<<<<<<"
-brew install ranger
+# echo ">>>>>>>>>> brew install ranger <<<<<<<<<<"
+# brew install ranger
