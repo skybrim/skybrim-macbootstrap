@@ -6,3 +6,5 @@ alias lsl='ls -l'
 alias lst='ls --tree'
 
 alias lgit='lazygit'
+
+alias pyc='/usr/local/bin/charm'
