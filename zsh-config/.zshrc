@@ -40,11 +40,14 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# mysql
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
 # golang
-export GOPATH=$HOME/Develop/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin:$GOBIN
-export GOPROXY="https://goproxy.cn"
+# export GOPATH=$HOME/Develop/go
+# export GOBIN=$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin:$GOBIN
+# export GOPROXY="https://goproxy.cn"
 
 # coreutils
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH

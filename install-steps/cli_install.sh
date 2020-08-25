@@ -12,7 +12,8 @@ brew tap mongodb/brew
 brew install mongodb/brew/mongodb-community
 
 echo ">>>>>>>>>> brew install mysql <<<<<<<<<<"
-brew install mysql
+brew install mysql@5.7
+brew link --force mysql@5.7
 
 echo ">>>>>>>>>> brew install redis <<<<<<<<<<"
 brew install redis
