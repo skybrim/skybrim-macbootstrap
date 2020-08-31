@@ -40,7 +40,7 @@ sh ~/.macbootstrap/nvm/nvm_install.sh
 
 # vim config
 echo ">>>>>>>>>> vim setting run <<<<<<<<<<"
-sudo sh ~/.macbootstrap/vim-config/vim_install.sh
+sh ~/.macbootstrap/vim-config/vim_install.sh
 
 # 设置 mac (关闭 guest | 隐藏 Docker)
 echo ">>>>>>>>>> mac setting run <<<<<<<<<<"
