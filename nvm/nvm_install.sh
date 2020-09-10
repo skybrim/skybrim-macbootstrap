@@ -6,8 +6,9 @@ echo ">>>>>>>>>> nvm install <<<<<<<<<<"
 curl -o- https://cdn.jsdelivr.net/gh/nvm-sh/nvm@v0.35.3/install.sh | bash
 
 echo ">>>>>>>>>> node install <<<<<<<<<<"
-nvm install 13.14.0
-nvm alias default 13.14.0
+# LTS 版本
+nvm install 12.18.3
+nvm alias default 12.18.3
 ln -s $(which node) /usr/local/bin/node
 
 # npm config -g set registry https://registry.npm.taobao.org
