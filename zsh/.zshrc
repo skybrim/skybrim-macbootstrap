@@ -6,8 +6,8 @@ plugins=(git extract encode64 urltools brew zsh-syntax-highlighting zsh-autosugg
 ZSH_THEME="spaceship"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.macbootstrap/zsh-config/func.sh
-source ~/.macbootstrap/zsh-config/alias.sh
+source ~/.macbootstrap/zsh/func.sh
+source ~/.macbootstrap/zsh/alias.sh
 source ~/.macbootstrap/basic.sh
 
 # autojump

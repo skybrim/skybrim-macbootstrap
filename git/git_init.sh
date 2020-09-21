@@ -5,9 +5,9 @@ rm -rf ~/.gitconfig
 rm -rf ~/.gitattributes
 rm -rf ~/.gitignore_global
 
-ln -s ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
-ln -s ~/.macbootstrap/git-config/.gitattributes ~/.gitattributes
-ln -s ~/.macbootstrap/git-config/.gitignore_global ~/.gitignore_global
+ln -s ~/.macbootstrap/git/.gitconfig ~/.gitconfig
+ln -s ~/.macbootstrap/git/.gitattributes ~/.gitattributes
+ln -s ~/.macbootstrap/git/.gitignore_global ~/.gitignore_global
 
 #1 brew install gpg 来安装依赖。
 #2 输入 gpg --full-generate-key 并按照配置安装，注意第三步选择时长时，如果是个人使用可以填 0，表示永不过期，避免以后的麻烦。最后填写密码时可以不填。

@@ -8,7 +8,7 @@ fi
 # zshrc setup
 echo ">>>>>>>>>> .zshrc replace <<<<<<<<<<"
 rm -rf ~/.zshrc
-ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
+ln -s ~/.macbootstrap/zsh/.zshrc ~/.zshrc
 
 echo ">>>>>>>>>> oh-my-zsh theme spaceship-prompt <<<<<<<<<<"
 git clone https://github.com/denysdovhan/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt

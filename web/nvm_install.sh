@@ -11,19 +11,18 @@ nvm install 12.18.3
 nvm alias default 12.18.3
 ln -s $(which node) /usr/local/bin/node
 
-# npm config -g set registry https://registry.npm.taobao.org
-
 # hexo
-# npm install -g hexo-cli
+npm install -g hexo-cli
+# react
+npm install -g create-react-app
+# next.js
+npm install -g create-next-app
+
+# npm config -g set registry https://registry.npm.taobao.org
 
 # whistle 抓包工具
 # npm install -g whistle
 
-# npm install -g gnomon
-# npm install -g vue-cli
-# npm install -g es-checker
-# npm install -g sequelize-auto
-# npm install -g bash-language-server
-# npm install -g eslint-plugin-html
-# npm install -g js-beautify
-# npm install -g eslint
+
+echo ">>>>>>>>>> brew install yarn <<<<<<<<<<"
+brew install yarn
