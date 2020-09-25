@@ -85,6 +85,9 @@ brew cask install --appdir='/usr/local/bin' qlimagesize qlvideo # Avoid password
 echo ">>>>>>>>>> rvm install <<<<<<<<<<"
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 curl -sSL https://get.rvm.io | bash -s stable
+echo "ruby_url=https://cache.ruby-china.com/pub/ruby" > ~/.rvm/user/db
+rvm install 2.7.1 --disbale-binary
+rvm use 2.7.1 --default
 
 # 汇编编译器
 echo ">>>>>>>>>> brew install yasm <<<<<<<<<<"
