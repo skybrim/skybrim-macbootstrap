@@ -9,15 +9,13 @@ fi
 echo ">>>>>>>>>> .zshrc replace <<<<<<<<<<"
 rm -rf ~/.zshrc
 ln -s ~/.macbootstrap/zsh/.zshrc ~/.zshrc
+ln -s ~/.macbootstrap/zsh/.p10k.zsh ~/.p10k.zsh
 
-echo ">>>>>>>>>> oh-my-zsh theme spaceship-prompt <<<<<<<<<<"
-git clone https://github.com/denysdovhan/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt
+echo ">>>>>>>>>> oh-my-zsh theme powerlevel10k <<<<<<<<<<"
+❯ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 echo ">>>>>>>>>> oh-my-zsh plugins zsh-syntax-highlighting <<<<<<<<<<"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 echo ">>>>>>>>>> oh-my-zsh plugins zsh-autosuggestions <<<<<<<<<<"
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-
-rm -rf ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
-ln -s ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
