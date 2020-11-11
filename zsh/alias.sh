@@ -7,4 +7,6 @@ alias lst='ls --tree'
 
 alias lgit='lazygit'
 
+alias vim='nvim'
+
 alias pyc='/usr/local/bin/charm'

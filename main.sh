@@ -35,8 +35,8 @@ echo ">>>>>>>>>> web config <<<<<<<<<<"
 sh ~/.macbootstrap/web/nvm_install.sh
 
 # vim config
-echo ">>>>>>>>>> vim config <<<<<<<<<<"
-sh ~/.macbootstrap/vim/vim_install.sh
+# echo ">>>>>>>>>> vim config <<<<<<<<<<"
+# sh ~/.macbootstrap/vim/vim_install.sh
 
 # 设置 mac (关闭 guest | 隐藏 Docker)
 echo ">>>>>>>>>> mac config <<<<<<<<<<"
