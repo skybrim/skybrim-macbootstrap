@@ -66,11 +66,11 @@ else
     echo "You have installed coderunner"
 fi
 
-if [[ ! -e /Applications/youdaonote.app ]]; then
-    echo ">>>>>>>>>> brew cask install youdaonote <<<<<<<<<<"
-    brew cask install youdaonote
+if [[ ! -e /Applications/Notion.app ]]; then
+    echo ">>>>>>>>>> brew cask install Notion <<<<<<<<<<"
+    brew cask install notion
 else
-    echo "You have installed youdaonote"
+    echo "You have installed notion"
 fi
 
 # Dash 文档
