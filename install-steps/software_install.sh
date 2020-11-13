@@ -113,12 +113,20 @@ else
     echo "You have installed tableplus"
 fi
 
-# docker
-if [[ ! -e /Applications/Docker.app ]]; then
-    echo ">>>>>>>>>> brew cask install Docker <<<<<<<<<<"
-    brew cask install docker
+# stats
+if [[ ! -e /Applications/Stats.app ]]; then
+    echo ">>>>>>>>>> brew cask install stats <<<<<<<<<<"
+    brew cask install stats
 else
-    echo "You have installed robo-3t"
+    echo "You have installed stats"
+fi
+
+# dozer
+if [[ ! -e /Applications/Dozer.app ]]; then
+    echo ">>>>>>>>>> brew cask install dozer <<<<<<<<<<"
+    brew cask install dozer
+else
+    echo "You have installed dozer"
 fi
 
 echo ">>>>>>>>>> brew cask install chromedriver <<<<<<<<<<"
