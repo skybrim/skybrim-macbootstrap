@@ -175,7 +175,13 @@ else
     echo "You have installed the-unarchiver"
 fi
 
-brew cask install the-unarchiver
+# stretchly 定时休息提醒
+ if [[ ! -e /Applications/stretchly.app ]]; then
+     echo ">>>>>>>>>> brew cask install stretchly <<<<<<<<<<"
+     brew cask install stretchly
+ else
+     echo "You have installed stretchly"
+ fi
 
 # calibre 电子书工具
 # if [[ ! -e /Applications/calibre.app ]]; then
@@ -209,18 +215,6 @@ brew cask install the-unarchiver
 #     echo "You have installed spectacle"
 # fi
 
-# stretchly 定时休息提醒
-# if [[ ! -e /Applications/stretchly.app ]]; then
-#     echo ">>>>>>>>>> brew cask install stretchly <<<<<<<<<<"
-#     brew cask install stretchly
-# else
-#     echo "You have installed stretchly"
-# fi
-
-# brew cask install proxifier
-# open /Applications/Proxifier.app
-# defaults write com.initex.proxifier.macosx.plist LicenseOwner -string "bestswifter"
-# defaults write com.initex.proxifier.macosx.plist LicenseKey -string "P427L-9Y552-5433E-8DSR3-58Z68"
 
 # Install Charles
 # if [[ -e /Applications/Charles.app ]]; then
@@ -229,25 +223,3 @@ brew cask install the-unarchiver
 #     brew cask install charles
 # fi
 
-# if [[ ! -e /Applications/karabiner-elements.app ]]; then
-#     echo ">>>>>>>>>> brew cask install karabiner-elements <<<<<<<<<<"
-#     brew cask install karabiner-elements
-# else
-#     echo "You have installed karabiner-elements"
-# fi
-
-# sketch
-# if [[ ! -e /Applications/sketch.app ]]; then
-#     echo ">>>>>>>>>> brew cask install sketch <<<<<<<<<<"
-#     brew cask install sketch
-# else
-#     echo "You have installed sketch"
-# fi
-
-# robo-3t
-# if [[ ! -e /Applications/Robo\ 3T.app ]]; then
-#     echo ">>>>>>>>>> brew cask install robo-3t <<<<<<<<<<"
-#     brew cask install robo-3t
-# else
-#     echo "You have installed robo-3t"
-# fi

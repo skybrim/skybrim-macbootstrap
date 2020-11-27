@@ -7,17 +7,6 @@ brew install git
 echo ">>>>>>>>>> brew install lazygit <<<<<<<<<<"
 brew install jesseduffield/lazygit/lazygit
 
-echo ">>>>>>>>>> brew install mongodb <<<<<<<<<<"
-brew tap mongodb/brew
-brew install mongodb/brew/mongodb-community
-
-echo ">>>>>>>>>> brew install mysql <<<<<<<<<<"
-brew install mysql@5.7
-brew link --force mysql@5.7
-
-echo ">>>>>>>>>> brew install redis <<<<<<<<<<"
-brew install redis
-
 echo ">>>>>>>>>> brew install coreutils <<<<<<<<<<"
 brew install coreutils
 
@@ -68,9 +57,6 @@ brew install git-lfs && git lfs install
 
 echo ">>>>>>>>>> brew install mitmproxy <<<<<<<<<<"
 brew install mitmproxy
-
-echo ">>>>>>>>>> brew install neovim <<<<<<<<<<"
-brew install neovim
 
 # ls 增强
 echo ">>>>>>>>>> brew install lsd <<<<<<<<<<"
@@ -130,3 +116,14 @@ cp ~/.macbootstrap/config/.lldbinit ~/.lldbinit
 
 # echo ">>>>>>>>>> brew install ranger <<<<<<<<<<"
 # brew install ranger
+
+#echo ">>>>>>>>>> brew install mongodb <<<<<<<<<<"
+#brew tap mongodb/brew
+#brew install mongodb/brew/mongodb-community
+
+#echo ">>>>>>>>>> brew install mysql <<<<<<<<<<"
+#brew install mysql@5.7
+#brew link --force mysql@5.7
+
+#echo ">>>>>>>>>> brew install redis <<<<<<<<<<"
+#brew install redis
