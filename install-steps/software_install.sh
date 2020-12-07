@@ -26,10 +26,10 @@ if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     echo ">>>>>>>>>> brew  install google-chrome <<<<<<<<<<"
     brew  install google-chrome
     # Set Chrome as default browser
-    git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
-    (cd ./tools/defaultbrowser && make && make install)
-    defaultbrowser chrome
-    [[ -d ./tools/defaultbrowser ]] && rm -rf ./tools/defaultbrowser
+#     git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
+#     (cd ./tools/defaultbrowser && make && make install)
+#     defaultbrowser chrome
+#     [[ -d ./tools/defaultbrowser ]] && rm -rf ./tools/defaultbrowser
 else
     echo "You have installed chrome"
 fi
