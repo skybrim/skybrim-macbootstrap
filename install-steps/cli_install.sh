@@ -4,6 +4,9 @@ source $HOME/.macbootstrap/basic.sh
 echo ">>>>>>>>>> brew install git <<<<<<<<<<"
 brew install git
 
+echo ">>>>>>>>>> brew install scmpuff <<<<<<<<<<"
+brew install scmpuff
+
 echo ">>>>>>>>>> brew install lazygit <<<<<<<<<<"
 brew install jesseduffield/lazygit/lazygit
 
