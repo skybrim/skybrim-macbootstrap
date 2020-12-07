@@ -25,7 +25,7 @@ fi
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     echo ">>>>>>>>>> brew  install google-chrome <<<<<<<<<<"
     brew  install google-chrome
-    # Set Chrome as default browser
+#     Set Chrome as default browser
 #     git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
 #     (cd ./tools/defaultbrowser && make && make install)
 #     defaultbrowser chrome
@@ -154,11 +154,11 @@ brew  install font-hack-nerd-font
 
 echo ">>>>>>>>>> brew  install sogouinput <<<<<<<<<<"
 brew  install sogouinput
-sogou_base="/usr/local/room/sogouinput"
-sogou_version="$sogou_base/"`ls "$sogou_base"`
-sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
-open "$sogou_app"
-sh ~/.macbootstrap/install-steps/sogou_sync.sh
+# sogou_base="/usr/local/room/sogouinput"
+# sogou_version="$sogou_base/"`ls "$sogou_base"`
+# sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
+# open "$sogou_app"
+# sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
 # picgo 上传图片
 if [[ ! -e /Applications/picgo.app ]]; then
