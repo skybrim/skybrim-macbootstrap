@@ -122,12 +122,12 @@ else
 fi
 
 # dozer
-if [[ ! -e /Applications/Dozer.app ]]; then
-    echo ">>>>>>>>>> brew  install dozer <<<<<<<<<<"
-    brew  install dozer
-else
-    echo "You have installed dozer"
-fi
+# if [[ ! -e /Applications/Dozer.app ]]; then
+#     echo ">>>>>>>>>> brew  install dozer <<<<<<<<<<"
+#     brew  install dozer
+# else
+#     echo "You have installed dozer"
+# fi
 
 echo ">>>>>>>>>> brew  install chromedriver <<<<<<<<<<"
 brew  install chromedriver
