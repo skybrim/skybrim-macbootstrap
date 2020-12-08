@@ -148,9 +148,9 @@ else
     echo "You have installed cheatsheet"
 fi
 
-echo ">>>>>>>>>> brew tap homebrew/-fonts <<<<<<<<<<"
-brew tap homebrew/-fonts
-brew  install font-hack-nerd-font
+# echo ">>>>>>>>>> brew tap homebrew/-fonts <<<<<<<<<<"
+# brew tap homebrew/-fonts
+# brew  install font-hack-nerd-font
 
 echo ">>>>>>>>>> brew  install sogouinput <<<<<<<<<<"
 brew  install sogouinput
