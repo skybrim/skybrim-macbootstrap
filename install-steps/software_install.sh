@@ -76,7 +76,7 @@ fi
 # Dash 文档
 if [[ ! -e /Applications/Dash.app ]]; then
     echo ">>>>>>>>>> brew  install dash <<<<<<<<<<"
-    brew  install dash
+    brew  install --cask dash
 else
     echo "You have installed dash"
 fi
