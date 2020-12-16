@@ -61,6 +61,8 @@ brew install git-lfs && git lfs install
 echo ">>>>>>>>>> brew install mitmproxy <<<<<<<<<<"
 brew install mitmproxy
 
+brew install ncdu
+
 # ls 增强
 echo ">>>>>>>>>> brew install lsd <<<<<<<<<<"
 brew install lsd

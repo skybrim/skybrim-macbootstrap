@@ -113,6 +113,14 @@ else
     echo "You have installed tableplus"
 fi
 
+# docker
+if [[ ! -e /Applications/Docker.app ]]; then
+    echo ">>>>>>>>>> brew  install docker <<<<<<<<<<"
+    brew  install docker
+else
+    echo "You have installed docker"
+fi
+
 # stats
 if [[ ! -e /Applications/Stats.app ]]; then
     echo ">>>>>>>>>> brew  install stats <<<<<<<<<<"
@@ -120,14 +128,6 @@ if [[ ! -e /Applications/Stats.app ]]; then
 else
     echo "You have installed stats"
 fi
-
-# dozer
-# if [[ ! -e /Applications/Dozer.app ]]; then
-#     echo ">>>>>>>>>> brew  install dozer <<<<<<<<<<"
-#     brew  install dozer
-# else
-#     echo "You have installed dozer"
-# fi
 
 echo ">>>>>>>>>> brew  install chromedriver <<<<<<<<<<"
 brew  install chromedriver
