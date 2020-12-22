@@ -19,9 +19,12 @@ sudo ln -s ~/.macbootstrap/proxy/ss.pac /Library/WebServer/Documents/ss.pac
 echo ">>>>>>>>>> zsh config <<<<<<<<<<"
 sh ~/.macbootstrap/zsh/zsh_install.sh
 
-# start install
+echo ">>>>>>>>>> vim config <<<<<<<<<<"
+sh ~/.macbootstrap/vim/vim_install.sh
+
 echo ">>>>>>>>>> cli_install run <<<<<<<<<<"
 sh ~/.macbootstrap/install-steps/cli_install.sh
+
 echo ">>>>>>>>>> software_install run<<<<<<<<<<"
 sh ~/.macbootstrap/install-steps/software_install.sh
 
@@ -33,10 +36,6 @@ sh ~/.macbootstrap/python/python_install.sh
 
 echo ">>>>>>>>>> web config <<<<<<<<<<"
 sh ~/.macbootstrap/web/nvm_install.sh
-
-# vim config
-# echo ">>>>>>>>>> vim config <<<<<<<<<<"
-sh ~/.macbootstrap/vim/vim_install.sh
 
 # 设置 mac (关闭 guest | 隐藏 Docker)
 echo ">>>>>>>>>> mac config <<<<<<<<<<"

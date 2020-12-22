@@ -59,13 +59,6 @@ else
     echo "You have installed vscode"
 fi
 
-if [[ ! -e /Applications/CodeRunner.app ]]; then
-    echo ">>>>>>>>>> brew  install coderunner <<<<<<<<<<"
-    brew  install coderunner
-else
-    echo "You have installed coderunner"
-fi
-
 if [[ ! -e /Applications/Notion.app ]]; then
     echo ">>>>>>>>>> brew  install Notion <<<<<<<<<<"
     brew  install notion
@@ -89,14 +82,6 @@ else
     echo "You have installed alfred 4"
 fi
 
-# IINA 播放器
-if [[ ! -e /Applications/IINA.app ]]; then
-    echo ">>>>>>>>>> brew  install iina <<<<<<<<<<"
-    brew  install iina
-else
-    echo "You have installed IINA"
-fi
-
 # Fliqlo 屏保
 if [[ ! -e /Applications/Fliqlo.app ]]; then
     echo ">>>>>>>>>> brew  install fliqlo <<<<<<<<<<"
@@ -113,14 +98,6 @@ else
     echo "You have installed tableplus"
 fi
 
-# docker
-if [[ ! -e /Applications/Docker.app ]]; then
-    echo ">>>>>>>>>> brew  install docker <<<<<<<<<<"
-    brew  install docker
-else
-    echo "You have installed docker"
-fi
-
 # stats
 if [[ ! -e /Applications/Stats.app ]]; then
     echo ">>>>>>>>>> brew  install stats <<<<<<<<<<"
@@ -128,9 +105,6 @@ if [[ ! -e /Applications/Stats.app ]]; then
 else
     echo "You have installed stats"
 fi
-
-echo ">>>>>>>>>> brew  install chromedriver <<<<<<<<<<"
-brew  install chromedriver
 
 # pusher 推送测试工具
 if [[ ! -e /Applications/pusher.app ]]; then
@@ -147,10 +121,6 @@ if [[ ! -e /Applications/cheatsheet.app ]]; then
 else
     echo "You have installed cheatsheet"
 fi
-
-# echo ">>>>>>>>>> brew tap homebrew/-fonts <<<<<<<<<<"
-# brew tap homebrew/-fonts
-# brew  install font-hack-nerd-font
 
 echo ">>>>>>>>>> brew  install sogouinput <<<<<<<<<<"
 brew  install sogouinput
@@ -183,22 +153,6 @@ fi
      echo "You have installed stretchly"
  fi
 
-# calibre 电子书工具
-# if [[ ! -e /Applications/calibre.app ]]; then
-#     echo ">>>>>>>>>> brew  install calibre <<<<<<<<<<"
-#     brew  install calibre
-# else
-#     echo "You have installed calibre"
-# fi
-
-# balenaetcher 烧录工具
-# if [[ ! -e /Applications/balenaetcher.app ]]; then
-#     echo ">>>>>>>>>> brew  install balenaetcher <<<<<<<<<<"
-#     brew  install balenaetcher
-# else
-#     echo "You have installed balenaetcher"
-# fi
-
 # motrix
 # if [[ ! -e /Applications/Motrix.app ]]; then
 #     echo ">>>>>>>>>> brew  install motrix <<<<<<<<<<"
@@ -215,7 +169,6 @@ fi
 #     echo "You have installed spectacle"
 # fi
 
-
 # Install Charles
 # if [[ -e /Applications/Charles.app ]]; then
 #     echo "You have installed charles"
@@ -223,3 +176,6 @@ fi
 #     brew  install charles
 # fi
 
+# echo ">>>>>>>>>> brew tap homebrew/-fonts <<<<<<<<<<"
+# brew tap homebrew/-fonts
+# brew  install font-hack-nerd-font

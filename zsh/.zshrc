@@ -18,6 +18,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.macbootstrap/zsh/func.sh
 source ~/.macbootstrap/zsh/alias.sh
 source ~/.macbootstrap/basic.sh
+bindkey -v
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
