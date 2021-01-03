@@ -22,16 +22,11 @@ else
     echo "You have installed qq"
 fi
 
-if [[ ! -e /Applications/Google\ Chrome.app ]]; then
-    echo ">>>>>>>>>> brew  install google-chrome <<<<<<<<<<"
-    brew  install google-chrome
-#     Set Chrome as default browser
-#     git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
-#     (cd ./tools/defaultbrowser && make && make install)
-#     defaultbrowser chrome
-#     [[ -d ./tools/defaultbrowser ]] && rm -rf ./tools/defaultbrowser
+if [[ ! -e /Applications/Firefox.app ]]; then
+    echo ">>>>>>>>>> brew  install Firefox <<<<<<<<<<"
+    brew  install Firefox
 else
-    echo "You have installed chrome"
+    echo "You have installed Firefox"
 fi
 
 # fork
