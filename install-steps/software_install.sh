@@ -1,6 +1,7 @@
 # install software
 source $HOME/.macbootstrap/basic.sh
 
+# iTerm
 if [[ ! -e /Applications/iTerm.app ]]; then
     echo ">>>>>>>>>> brew  install iterm2 <<<<<<<<<<"
     brew  install iterm2
@@ -8,6 +9,7 @@ else
     echo "You have installed iTerm2"
 fi
 
+# WeChat
 if [[ ! -e /Applications/WeChat.app ]]; then
     echo ">>>>>>>>>> brew  install wechat <<<<<<<<<<"
     brew  install wechat
@@ -15,6 +17,7 @@ else
     echo "You have installed WeChat"
 fi
 
+# qq
 if [[ ! -e /Applications/qq.app ]]; then
     echo ">>>>>>>>>> brew  install qq <<<<<<<<<<"
     brew  install qq
@@ -22,6 +25,7 @@ else
     echo "You have installed qq"
 fi
 
+# Firefox
 if [[ ! -e /Applications/Firefox.app ]]; then
     echo ">>>>>>>>>> brew  install Firefox <<<<<<<<<<"
     brew  install Firefox
@@ -54,6 +58,7 @@ else
     echo "You have installed vscode"
 fi
 
+# notion
 if [[ ! -e /Applications/Notion.app ]]; then
     echo ">>>>>>>>>> brew  install Notion <<<<<<<<<<"
     brew  install notion
@@ -93,14 +98,6 @@ else
     echo "You have installed tableplus"
 fi
 
-# stats
-if [[ ! -e /Applications/Stats.app ]]; then
-    echo ">>>>>>>>>> brew  install stats <<<<<<<<<<"
-    brew  install stats
-else
-    echo "You have installed stats"
-fi
-
 # pusher 推送测试工具
 if [[ ! -e /Applications/pusher.app ]]; then
     echo ">>>>>>>>>> brew  install pusher <<<<<<<<<<"
@@ -125,13 +122,7 @@ brew  install sogouinput
 # open "$sogou_app"
 # sh ~/.macbootstrap/install-steps/sogou_sync.sh
 
-# picgo 上传图片
-if [[ ! -e /Applications/picgo.app ]]; then
-    echo ">>>>>>>>>> brew  install picgo <<<<<<<<<<"
-    brew  install picgo
-else
-    echo "You have installed picgo"
-fi
+
 
 if [[ ! -e /Applications/The\ Unarchiver.app ]]; then
     echo ">>>>>>>>>> brew  install the-unarchiver <<<<<<<<<<"
@@ -141,12 +132,12 @@ else
 fi
 
 # stretchly 定时休息提醒
- if [[ ! -e /Applications/stretchly.app ]]; then
-     echo ">>>>>>>>>> brew  install stretchly <<<<<<<<<<"
-     brew  install stretchly
- else
-     echo "You have installed stretchly"
- fi
+if [[ ! -e /Applications/stretchly.app ]]; then
+    echo ">>>>>>>>>> brew  install stretchly <<<<<<<<<<"
+    brew  install stretchly
+else
+    echo "You have installed stretchly"
+fi
 
 # motrix
 # if [[ ! -e /Applications/Motrix.app ]]; then
@@ -174,3 +165,11 @@ fi
 # echo ">>>>>>>>>> brew tap homebrew/-fonts <<<<<<<<<<"
 # brew tap homebrew/-fonts
 # brew  install font-hack-nerd-font
+
+# stats
+# if [[ ! -e /Applications/Stats.app ]]; then
+#     echo ">>>>>>>>>> brew  install stats <<<<<<<<<<"
+#     brew  install stats
+# else
+#     echo "You have installed stats"
+# fi

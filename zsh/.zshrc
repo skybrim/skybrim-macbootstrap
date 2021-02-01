@@ -12,7 +12,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 plugins=(git extract encode64 urltools brew zsh-syntax-highlighting zsh-autosuggestions safe-paste vi-mode)
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="aussiegeek"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.macbootstrap/zsh/func.sh

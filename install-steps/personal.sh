@@ -42,3 +42,19 @@ fi
 # chromedriver
 echo ">>>>>>>>>> brew  install chromedriver <<<<<<<<<<"
 brew  install chromedriver
+
+# weakauras-companion 魔兽世界wa更新
+if [[ ! -e /Applications/weakauras\ companion.app ]]; then
+    echo ">>>>>>>>>> brew  weakauras-companion <<<<<<<<<<"
+    brew install weakauras-companion
+else
+    echo "You have installed weakauras-companion"
+fi
+
+# picgo 上传图片
+if [[ ! -e /Applications/picgo.app ]]; then
+    echo ">>>>>>>>>> brew  install picgo <<<<<<<<<<"
+    brew  install picgo
+else
+    echo "You have installed picgo"
+fi

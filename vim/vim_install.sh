@@ -12,3 +12,5 @@ git clone https://github.com/mileszs/ack.vim.git ~/.vim/pack/vendor/start/ack.vi
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 git clone https://github.com/easymotion/vim-easymotion.git ~/.vim/pack/vendor/start/easymotion
+git clone https://tpope.io/vim/surround.git ~/.vim/pack/vendor/start/surround
+vim -u NONE -c "helptags surround/doc" -c q
