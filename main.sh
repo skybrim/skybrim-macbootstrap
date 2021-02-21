@@ -31,8 +31,8 @@ sh ~/.macbootstrap/install-steps/software_install.sh
 echo ">>>>>>>>>> git config <<<<<<<<<<"
 sh ~/.macbootstrap/git/git_init.sh
 
-echo ">>>>>>>>>> python config <<<<<<<<<<"
-sh ~/.macbootstrap/python/python_install.sh
+# echo ">>>>>>>>>> python config <<<<<<<<<<"
+# sh ~/.macbootstrap/python/python_install.sh
 
 echo ">>>>>>>>>> web config <<<<<<<<<<"
 sh ~/.macbootstrap/web/nvm_install.sh

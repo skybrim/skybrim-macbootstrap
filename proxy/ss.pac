@@ -194,17 +194,6 @@ var domains = [
     //cdn
     "cloudfront.net",
     "colwiz.com",
-
-    //my
-    "emby.media",
-    "workona.com",
-    "app.gitbook.com",
-    "djangoproject.com",
-    "bandwagonhost.com",
-    "fontsquirrel.com",
-    "reddit.com",
-    "guide.v2fly.org",
-    "reactnative.cn"
 ];
 
 function FindProxyForURL(url, host) {

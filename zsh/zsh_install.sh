@@ -9,10 +9,6 @@ fi
 echo ">>>>>>>>>> .zshrc replace <<<<<<<<<<"
 rm -rf ~/.zshrc
 ln -s ~/.macbootstrap/zsh/.zshrc ~/.zshrc
-ln -s ~/.macbootstrap/zsh/.p10k.zsh ~/.p10k.zsh
-
-echo ">>>>>>>>>> oh-my-zsh theme powerlevel10k <<<<<<<<<<"
-❯ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 echo ">>>>>>>>>> oh-my-zsh plugins zsh-syntax-highlighting <<<<<<<<<<"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
