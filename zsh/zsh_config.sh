@@ -1,4 +1,4 @@
-source $HOME/.macbootstrap/basic.sh
+#!/bin/sh
 
 if [[ ! -e ~/.oh-my-zsh ]]; then
     echo ">>>>>>>>>> oh-my-zsh download <<<<<<<<<<"

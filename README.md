@@ -1,6 +1,3 @@
-```shell
-curl https://cdn.jsdelivr.net/gh/skybrim/skybrim-macbootstrap@master/bootstrap.sh | sh
-```
 
 参考:
 

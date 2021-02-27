@@ -1,5 +1,4 @@
-# install software
-source $HOME/.macbootstrap/basic.sh
+#!/bin/sh
 
 # iTerm
 if [[ ! -e /Applications/iTerm.app ]]; then
@@ -7,22 +6,6 @@ if [[ ! -e /Applications/iTerm.app ]]; then
     brew  install iterm2
 else
     echo "You have installed iTerm2"
-fi
-
-# WeChat
-if [[ ! -e /Applications/WeChat.app ]]; then
-    echo ">>>>>>>>>> brew  install wechat <<<<<<<<<<"
-    brew  install wechat
-else
-    echo "You have installed WeChat"
-fi
-
-# qq
-if [[ ! -e /Applications/qq.app ]]; then
-    echo ">>>>>>>>>> brew  install qq <<<<<<<<<<"
-    brew  install qq
-else
-    echo "You have installed qq"
 fi
 
 # Firefox

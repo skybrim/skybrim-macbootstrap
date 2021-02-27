@@ -1,5 +1,7 @@
+#!/bin/sh
+
 # Disable guest account
-sudo bash ~/.macbootstrap/mac-config/guest_account.sh disable
+# sudo sh ~/.macbootstrap/mac-config/guest_account.sh disable
 
 # keyboard setting
 # Use F1-F12 as standard function keys
@@ -65,7 +67,7 @@ chflags nohidden ~/Library
 cp ~/.macbootstrap/mac-config/com.apple.Siri.plist ~/Library/Preferences/
 
 # Hide input source Icon in menu bar
-cp ~/.macbootstrap/mac-config/com.apple.systemuiserver.plist ~/Library/Preferences/
+# cp ~/.macbootstrap/mac-config/com.apple.systemuiserver.plist ~/Library/Preferences/
 
 # Remove airplay icon in menubar
 defaults write com.apple.airplay showInMenuBarIfPresent -bool false

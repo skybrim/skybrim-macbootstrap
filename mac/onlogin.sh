@@ -1,4 +1,4 @@
-source $HOME/.macbootstrap/basic.sh
+#!/bin/sh
 
 # hhkb
 

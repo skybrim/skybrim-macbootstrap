@@ -1,4 +1,4 @@
-source $HOME/.macbootstrap/basic.sh
+#!/bin/sh
 
 echo ">>>>>>>>>> brew install vim <<<<<<<<<<"
 brew install vim

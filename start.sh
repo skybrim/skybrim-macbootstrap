@@ -1,5 +1,4 @@
 #!/bin/sh
-source $HOME/.macbootstrap/basic.sh
 
 # install v2ray
 brew tap v2ray/v2ray
@@ -17,10 +16,10 @@ sudo ln -s ~/.macbootstrap/proxy/ss.pac /Library/WebServer/Documents/ss.pac
 # brew services start v2ray-core
 
 echo ">>>>>>>>>> zsh config <<<<<<<<<<"
-sh ~/.macbootstrap/zsh/zsh_install.sh
+sh ~/.macbootstrap/zsh/zsh_config.sh
 
 echo ">>>>>>>>>> vim config <<<<<<<<<<"
-sh ~/.macbootstrap/vim/vim_install.sh
+sh ~/.macbootstrap/vim/vim_config.sh
 
 echo ">>>>>>>>>> cli_install run <<<<<<<<<<"
 sh ~/.macbootstrap/install-steps/cli_install.sh
@@ -29,18 +28,17 @@ echo ">>>>>>>>>> software_install run<<<<<<<<<<"
 sh ~/.macbootstrap/install-steps/software_install.sh
 
 echo ">>>>>>>>>> git config <<<<<<<<<<"
-sh ~/.macbootstrap/git/git_init.sh
+sh ~/.macbootstrap/git/git_config.sh
 
 # echo ">>>>>>>>>> python config <<<<<<<<<<"
 # sh ~/.macbootstrap/python/python_install.sh
 
 echo ">>>>>>>>>> web config <<<<<<<<<<"
-sh ~/.macbootstrap/web/nvm_install.sh
+sh ~/.macbootstrap/web/web_config.sh
 
-# 设置 mac (关闭 guest | 隐藏 Docker)
 echo ">>>>>>>>>> mac config <<<<<<<<<<"
-sh ~/.macbootstrap/mac-config/macos.sh
+sh ~/.macbootstrap/mac/mac_config.sh
 
-# 开机脚本
+# 开机自动执行脚本
 echo ">>>>>>>>>> hook_login run <<<<<<<<<<"
-sh ~/.macbootstrap/mac-config/hook_login.sh
+sh ~/.macbootstrap/mac/hook_login.sh

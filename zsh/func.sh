@@ -1,3 +1,4 @@
+#!/bin/sh
 
 # 打开 Xcode 工程
 function xc() {
@@ -32,3 +33,18 @@ function vsc() {
     fi
 }
 
+# git difftool: icdiff
+function gdic() {
+    params="$@"
+    if brew ls --versions scmpuff > /dev/null; then
+        params=`scmpuff expand "$@" 2>/dev/null`
+    fi
+
+    if [ $# -eq 0 ]; then
+        git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" | less
+    elif [ ${#params} -eq 0 ]; then
+        git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$@" | less
+    else
+        git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$params" | less
+    fi
+}

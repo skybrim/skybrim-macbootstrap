@@ -1,4 +1,20 @@
-source $HOME/.macbootstrap/basic.sh
+#!/bin/sh
+
+# WeChat
+if [[ ! -e /Applications/WeChat.app ]]; then
+    echo ">>>>>>>>>> brew  install wechat <<<<<<<<<<"
+    brew  install wechat
+else
+    echo "You have installed WeChat"
+fi
+
+# qq
+if [[ ! -e /Applications/qq.app ]]; then
+    echo ">>>>>>>>>> brew  install qq <<<<<<<<<<"
+    brew  install qq
+else
+    echo "You have installed qq"
+fi
 
 if [[ ! -e /Applications/CodeRunner.app ]]; then
     echo ">>>>>>>>>> brew  install coderunner <<<<<<<<<<"

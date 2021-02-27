@@ -28,8 +28,8 @@
     textconv = plutil -convert xml1 -o -
 [user]
 	email = throughskybrim@gmail.com
-	name = skybrim
-	signingkey = D01670A4FD835EBFBF8300B9C420CE76698779F9
+	name = wiley
+	signingkey = 0844FC0D181655CC6F614F138F024ADC3270F69F
 [commit]
 	gpgsign = true
 [filter "lfs"]
@@ -40,6 +40,6 @@
 [diff]
 	tool = icdiff
 [difftool]
-  prompt = false
+    prompt = false
 [difftool "icdiff"]
-  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+    cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE

@@ -1,5 +1,4 @@
-# link git config
-source $HOME/.macbootstrap/basic.sh
+#!/bin/sh
 
 rm -rf ~/.gitconfig
 rm -rf ~/.gitattributes

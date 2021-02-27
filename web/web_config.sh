@@ -1,9 +1,8 @@
-source $HOME/.macbootstrap/basic.sh
-
+#!/bin/sh
 
 # nvm
 echo ">>>>>>>>>> nvm install <<<<<<<<<<"
-curl -o- https://cdn.jsdelivr.net/gh/nvm-sh/nvm@v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 # echo ">>>>>>>>>> node install <<<<<<<<<<"
 # # LTS 版本
@@ -17,6 +16,3 @@ curl -o- https://cdn.jsdelivr.net/gh/nvm-sh/nvm@v0.35.3/install.sh | bash
 # npm install -g yarn
 
 # npm config -g set registry https://registry.npm.taobao.org
-
-# whistle 抓包工具
-# npm install -g whistle

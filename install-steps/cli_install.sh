@@ -1,11 +1,18 @@
-# terminal package install
-source $HOME/.macbootstrap/basic.sh
+#!/bin/sh
+
+cli_name="git scmpuff"
 
 echo ">>>>>>>>>> brew install git <<<<<<<<<<"
 brew install git
 
 echo ">>>>>>>>>> brew install scmpuff <<<<<<<<<<"
 brew install scmpuff
+
+echo ">>>>>>>>>> brew install icdiff <<<<<<<<<<"
+brew install icdiff
+
+echo ">>>>>>>>>> brew install exiftool <<<<<<<<<<"
+brew install exiftool
 
 echo ">>>>>>>>>> brew install lazygit <<<<<<<<<<"
 brew install jesseduffield/lazygit/lazygit
@@ -73,14 +80,13 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook 
 brew cask install --appdir='/usr/local/bin' qlimagesize qlvideo # Avoid password
 
 # rvm
-echo ">>>>>>>>>> rvm install <<<<<<<<<<"
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-curl -sSL https://get.rvm.io | bash -s stable
-echo "ruby_url=https://cache.ruby-china.com/pub/ruby" > ~/.rvm/user/db
-# 忽略二进制，否则可能会请求 rubies.travis-ci.org
-# rvm install 2.6.5 --disable-binary
-# rvm use 2.6.5 --default
-# gem install cocoapods
+brew install rbenv
+brew install ruby-build
+brew install rbenv-vars
+rbenv install 2.7.2
+rbenv shell 2.7.2
+gem install bundler
+# bundle init
 
 # 汇编编译器
 echo ">>>>>>>>>> brew install yasm <<<<<<<<<<"
@@ -107,12 +113,6 @@ cp ~/.macbootstrap/config/.lldbinit ~/.lldbinit
 # 把图片渲染到终端显示
 # echo ">>>>>>>>>> brew install catimg <<<<<<<<<<"
 # brew install catimg
-
-# echo ">>>>>>>>>> brew install exiftool <<<<<<<<<<"
-# brew install exiftool
-
-# echo ">>>>>>>>>> brew install icdiff <<<<<<<<<<"
-# brew install icdiff
 
 # echo ">>>>>>>>>> brew install fd <<<<<<<<<<"
 # brew install fd
