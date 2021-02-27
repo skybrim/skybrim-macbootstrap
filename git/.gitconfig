@@ -27,11 +27,9 @@
 [diff "plist"]
     textconv = plutil -convert xml1 -o -
 [user]
-	email = throughskybrim@gmail.com
-	name = wiley
-	signingkey = 0844FC0D181655CC6F614F138F024ADC3270F69F
-[commit]
-	gpgsign = true
+	email = email
+	name = name
+	signingkey = signingkey
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
