@@ -14,5 +14,5 @@ fi
 
 # start
 echo ">>>>>>>>>> start <<<<<<<<<<"
-cd ~
+cd ~/.macbootstrap
 sh start.sh
