@@ -30,6 +30,9 @@ sh ~/.macbootstrap/install-steps/software_install.sh
 echo ">>>>>>>>>> git config <<<<<<<<<<"
 sh ~/.macbootstrap/git/git_config.sh
 
+echo ">>>>>>>>>> ruby config <<<<<<<<<<"
+sh ~/.macbootstrap/ruby/ruby_config.sh
+
 # echo ">>>>>>>>>> python config <<<<<<<<<<"
 # sh ~/.macbootstrap/python/python_install.sh
 
