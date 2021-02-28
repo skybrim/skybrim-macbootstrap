@@ -1,11 +1,13 @@
 #!/bin/sh
 
+brew update
+
 # install v2ray
 brew tap v2ray/v2ray
 brew install v2ray-core
 
 # 关联 v2ray 配置文件
-ln -s ~/.macbootstrap/proxy/config.json /usr/local/etc/v2ray/config.json
+ln -s ~/.macbootstrap/proxy/config.json /usr/local/etc/v2ray-core/config.json
 # 关联本地 pac 文件
 sudo ln -s ~/.macbootstrap/proxy/ss.pac /Library/WebServer/Documents/ss.pac
 # 终端开启代理
