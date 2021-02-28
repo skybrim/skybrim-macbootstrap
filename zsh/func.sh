@@ -48,10 +48,3 @@ function gdic() {
         git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$params" | less
     fi
 }
-
-# brew install
-function brew_i() {
-    for name in $@; do
-        brew install $name
-    done
-}

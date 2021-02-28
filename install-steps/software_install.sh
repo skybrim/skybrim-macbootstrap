@@ -1,14 +1,14 @@
 #!/bin/sh
 
-source ~/.macbootstrap/zsh/func.sh
+source ~/.macbootstrap/install-steps/install_func.sh
 
 common_software="iterm2 firefox notion alfred fliqlo sogouinput the-unarchiver stretchly"
 source_control_software="fork xversion"
 ide_software="visual-studio-code dash tableplus pusher"
 
-brew_i common_software
+brew_i $common_software
 # brew_i source_control_software
-brew_i ide_software
+brew_i $ide_software
 
 # # Xversion
 # if [[ ! -e /Applications/xversion.app ]]; then

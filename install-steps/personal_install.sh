@@ -1,8 +1,10 @@
 #!/bin/sh
 
-source ~/.macbootstrap/zsh/func.sh
+source ~/.macbootstrap/install-steps/install_func.sh
 
 personal_software="wechat qq iina docker calibre balenaetcher chromedriver picgo"
+
+brew_i $personal_software
 
 # if [[ ! -e /Applications/CodeRunner.app ]]; then
 #     echo ">>>>>>>>>> brew  install coderunner <<<<<<<<<<"
