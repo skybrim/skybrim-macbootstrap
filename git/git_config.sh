@@ -16,4 +16,3 @@ git lfs install
 #4 输入 gpg --armor --export pub <#GPG-ID#> 把公钥复制出来，拷贝到 GitHub GPG Keys 上。
 #5 输入 git config --global user.signingkey <#GPG-ID#> 来配置使用哪个 key。
 #6 单次提交时使用 git commit -s 参数来开启 GPG key，或者使用git config --global commit.gpgsign true 设置为全局默认使用。
-#7 输入 gvc <commit_hash> 来检查某次提交的 GPG 签名情况，如果没有输出，说明没有签名。它是git verify-commit命令的缩写。
