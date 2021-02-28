@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source ~/.macbootstrap/zsh/func.sh
+
 common_software="iterm2 firefox notion alfred fliqlo sogouinput the-unarchiver stretchly"
 source_control_software="fork xversion"
 ide_software="visual-studio-code dash tableplus pusher"

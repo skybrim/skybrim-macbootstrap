@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source ~/.macbootstrap/zsh/func.sh
+
 personal_software="wechat qq iina docker calibre balenaetcher chromedriver picgo"
 
 # if [[ ! -e /Applications/CodeRunner.app ]]; then
