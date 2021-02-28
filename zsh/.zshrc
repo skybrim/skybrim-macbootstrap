@@ -8,6 +8,8 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.macbootstrap/zsh/func.sh
 source ~/.macbootstrap/zsh/alias.sh
+source ~/.macbootstrap/mac/change_ctrl_caps.sh
+
 bindkey -v
 
 # autojump
