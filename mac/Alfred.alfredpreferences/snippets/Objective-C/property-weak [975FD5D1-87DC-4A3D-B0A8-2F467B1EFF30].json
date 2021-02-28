@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "@property (weak, nonatomic) <#class#> <#object#>;",
+    "uid" : "975FD5D1-87DC-4A3D-B0A8-2F467B1EFF30",
+    "name" : "property-weak",
+    "keyword" : "wp"
+  }
+}

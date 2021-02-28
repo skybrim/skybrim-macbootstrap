@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "- (instancetype)init {\n    \n    self = [super init];\n    if (self) {\n        <#expression#>\n    }\n    return self;\n}",
+    "uid" : "2AA3C0AD-25F8-4DC5-A290-D9558AD0641B",
+    "name" : "init",
+    "keyword" : "init"
+  }
+}

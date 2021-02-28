@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "@property (strong, nonatomic) <#class#> <#object#>;",
+    "uid" : "EF302EC4-4C93-4C0F-9E4A-686BDDD30067",
+    "name" : "property-strong",
+    "keyword" : "sp"
+  }
+}
