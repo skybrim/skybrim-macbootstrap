@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/.macbootstrap/install-steps/install_func.sh
+source ~/.macbootstrap/install_func.sh
 
 personal_software="wechat qq iina docker calibre balenaetcher chromedriver picgo"
 

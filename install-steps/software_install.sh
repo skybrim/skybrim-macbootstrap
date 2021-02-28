@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/.macbootstrap/install-steps/install_func.sh
+source ~/.macbootstrap/install_func.sh
 
 common_software="iterm2 firefox notion alfred fliqlo sogouinput the-unarchiver stretchly"
 source_control_software="fork xversion"

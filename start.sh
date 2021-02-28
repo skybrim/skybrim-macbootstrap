@@ -1,5 +1,8 @@
 #!/bin/sh
 
+source ~/.macbootstrap/install_func.sh
+
+# 更新brew
 brew update
 
 # install v2ray
@@ -17,33 +20,33 @@ sudo ln -s ~/.macbootstrap/proxy/ss.pac /Library/WebServer/Documents/ss.pac
 # sudo apachectl start
 # brew services start v2ray-core
 
-echo ">>>>>>>>>> zsh config <<<<<<<<<<"
+echo_blue 'zsh config run'
 sh ~/.macbootstrap/zsh/zsh_config.sh
 
-echo ">>>>>>>>>> vim config <<<<<<<<<<"
+echo_blue 'vim config run'
 sh ~/.macbootstrap/vim/vim_config.sh
 
-echo ">>>>>>>>>> cli_install run <<<<<<<<<<"
+echo_blue 'cli install run'
 sh ~/.macbootstrap/install-steps/cli_install.sh
 
-echo ">>>>>>>>>> software_install run<<<<<<<<<<"
+echo_blue 'software install run'
 sh ~/.macbootstrap/install-steps/software_install.sh
 
-echo ">>>>>>>>>> git config <<<<<<<<<<"
+echo_blue 'git config run'
 sh ~/.macbootstrap/git/git_config.sh
 
-echo ">>>>>>>>>> ruby config <<<<<<<<<<"
+echo_blue 'ruby config run'
 sh ~/.macbootstrap/ruby/ruby_config.sh
 
-# echo ">>>>>>>>>> python config <<<<<<<<<<"
+# echo_blue 'python config run'
 # sh ~/.macbootstrap/python/python_install.sh
 
-echo ">>>>>>>>>> web config <<<<<<<<<<"
+echo_blue 'web config run'
 sh ~/.macbootstrap/web/web_config.sh
 
-echo ">>>>>>>>>> mac config <<<<<<<<<<"
+echo_blue 'mac confgi run'
 sh ~/.macbootstrap/mac/mac_config.sh
 
 # 开机自动执行脚本
-echo ">>>>>>>>>> hook_login run <<<<<<<<<<"
+echo_blue 'hook login'
 sh ~/.macbootstrap/mac/hook_login.sh

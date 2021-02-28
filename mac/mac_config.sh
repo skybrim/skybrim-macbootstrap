@@ -64,10 +64,10 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool t
 chflags nohidden ~/Library
 
 # Hide Siri Icon in menu bar
-cp ~/.macbootstrap/mac-config/com.apple.Siri.plist ~/Library/Preferences/
+cp ~/.macbootstrap/mac/com.apple.Siri.plist ~/Library/Preferences/
 
 # Hide input source Icon in menu bar
-# cp ~/.macbootstrap/mac-config/com.apple.systemuiserver.plist ~/Library/Preferences/
+# cp ~/.macbootstrap/mac/com.apple.systemuiserver.plist ~/Library/Preferences/
 
 # Remove airplay icon in menubar
 defaults write com.apple.airplay showInMenuBarIfPresent -bool false

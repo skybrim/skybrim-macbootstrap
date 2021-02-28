@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/.macbootstrap/install-steps/install_func.sh
+source ~/.macbootstrap/install_func.sh
 
 git_tools="git scmpuff icdiff exiftool git-lfs gpg"
 compile_tools="coreutils cmake ninja yasm"
