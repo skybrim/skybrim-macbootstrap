@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "@property (copy, nonatomic) <#void#>(^<#block#>)(<#void#>);",
-    "uid" : "00732DAF-F6DD-4181-A47A-E422F65113B4",
-    "name" : "block",
-    "keyword" : "block"
-  }
-}

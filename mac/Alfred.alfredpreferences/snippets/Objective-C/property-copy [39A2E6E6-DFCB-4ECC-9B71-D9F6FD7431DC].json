@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "@property (copy, nonatomic) <#class#> <#object#>;",
-    "uid" : "39A2E6E6-DFCB-4ECC-9B71-D9F6FD7431DC",
-    "name" : "property-copy",
-    "keyword" : "cp"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "- (UIButton *)<#button#> {\n    \n    if (<#button#> == nil) {\n        \n        <#button#> = [UIButton buttonWithType:UIButtonTypeCustom];\n        \n        [<#button#> setBackgroundColor:<#expression#>];\n        [<#button#> setTitleColor:<#expression#> forState:UIControlStateNormal];\n        [<#button#> setTitle:<#expression#> forState:UIControlStateNormal];\n        <#button#>.titleLabel.font = [UIFont fontWithName:<#expression#> size:<#expression#>];\n    }\n    return <#button#>;\n}\n",
-    "uid" : "6F1D8A22-D181-4B24-BA69-56A3F2FD2C30",
-    "name" : "UIButton",
-    "keyword" : "btn"
-  }
-}

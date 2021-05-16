@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "- (UILabel *)<#label#> {\n    \n    if (<#label#> == ni;) {\n        \n        <#label#> = [[UILabel alloc] initWithFrame:CGRectZero];\n        <#label#>.textAlignment = NSTextAlignmentCenter;\n        <#label#>.text = <#expression#>;\n        <#label#>.textColor = <#expression#>;\n        <#label#>.font = [UIFont fontWithName:<#expression#> size:<#expression#>];\n        <#label#>.layer.cornerRadius = 5.0f;\n        <#label#>.layer.borderWidth = 0.5;\n   }\n    return <#label#>;\n}\n",
-    "uid" : "6F873E26-4712-4790-82F2-EBCD7BA9EBCC",
-    "name" : "UILabel",
-    "keyword" : "label"
-  }
-}

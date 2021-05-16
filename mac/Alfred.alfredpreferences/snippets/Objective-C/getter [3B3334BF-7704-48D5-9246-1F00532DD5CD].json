@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "- (<#class#> *)<#class#> {\n    \n    if (<#class#> == nil) {\n   }\n    return <#class#>;\n}\n",
-    "uid" : "3B3334BF-7704-48D5-9246-1F00532DD5CD",
-    "name" : "getter",
-    "keyword" : "get"
-  }
-}
