@@ -12,10 +12,7 @@ source ~/.macbootstrap/mac/change_ctrl_caps.sh
 
 bindkey -v
 
-# autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-# scmpuff
+# scmpuff git 插件
 eval "$(scmpuff init -s)"
 
 # gpg
@@ -30,13 +27,12 @@ export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 # nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm() { . "$HOME/.nvm/nvm.sh" ; nvm $@ ; }
+export PATH=$HOME/.nvm/versions/node/v14.16.0/bin/:$PATH
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-neofetch
+# neofetch
 
