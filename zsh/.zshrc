@@ -34,5 +34,5 @@ export PATH=$HOME/.nvm/versions/node/v14.16.0/bin/:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-# neofetch
+neofetch
 
