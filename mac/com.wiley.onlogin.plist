@@ -4,14 +4,15 @@
 <dict>
     <key>KeepAlive</key>
     <true/>
-    <key>RunAtLoad</key>
+    <key>LaunchOnlyOnce</key>
     <true/>
     <key>Label</key>
     <string>com.wiley.onlogin</string>
     <key>ProgramArguments</key>
     <array>
-        <string>sh</string>
-        <string>"$HOME/.macbootstrap/mac/onlogin.sh"</string>
+        <string>/bin/zsh</string>
+				<string>-c</string>
+        <string>$HOME/.macbootstrap/mac/onlogin.sh</string>
     </array>
 </dict>
 </plist>
