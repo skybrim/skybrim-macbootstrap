@@ -12,7 +12,13 @@ fi
 # install brew
 if [[ ! -e /usr/local/bin/brew ]]; then
   # 安装 homebrew
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+  export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+  export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+  /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/Homebrew/install@HEAD/install.sh)"
+	unset HOMEBREW_BREW_GIT_REMOTE
+	unset HOMEBREW_CORE_GIT_REMOTE
+	unset HOMEBREW_BOTTLE_DOMAIN
 else
   echo ">>>>>>>>>> You have installed brew <<<<<<<<<<"
 fi

@@ -2,6 +2,6 @@
 
 # miniconda
 echo ">>>>>>>>>> brew cask install miniconda <<<<<<<<<<"
-brew cask install miniconda
-conda init zsh
+brew cask install miniforge
+# conda init zsh
 # sudo chmod 777 ~/.conda/*

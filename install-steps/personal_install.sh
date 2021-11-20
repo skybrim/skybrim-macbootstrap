@@ -2,8 +2,8 @@
 
 source ~/.macbootstrap/install_func.sh
 
-personal_software="wechat qq iina docker calibre balenaetcher chromedriver picgo"
-
+personal_software="wechat qq iina docker"
+# calibre balenaetcher chromedriver picgo
 brew_i $personal_software
 
 # if [[ ! -e /Applications/CodeRunner.app ]]; then

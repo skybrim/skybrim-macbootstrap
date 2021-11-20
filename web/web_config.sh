@@ -8,7 +8,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # # LTS 版本
 # nvm install 14.15.1
 # nvm alias default 14.15.1
-# ln -s $(which node) /usr/local/bin/node
 
 # npm install -g hexo-cli
 # npm install -g create-react-app
@@ -16,3 +15,4 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # npm install -g yarn
 
 # npm config -g set registry https://registry.npm.taobao.org
+# ln -s $(which node) /usr/local/bin/node
