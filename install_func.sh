@@ -12,3 +12,10 @@ function brew_i() {
         brew install $name
     done
 }
+
+function brew_c() {
+	  for name in $@; do 
+	      echo_blue "$name installing"
+				brew install $name --cask
+		done
+}

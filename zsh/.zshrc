@@ -19,12 +19,6 @@ source ~/.macbootstrap/mac/change_ctrl_caps.sh
 
 bindkey -v
 
-# scmpuff git 插件
-eval "$(scmpuff init -s)"
-
-# gpg
-export GPG_TTY=$(tty)
-
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_AUTO_UPDATE=true
@@ -65,3 +59,6 @@ neofetch
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# scmpuff git 插件
+eval "$(scmpuff init -s)"
