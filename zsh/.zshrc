@@ -18,6 +18,7 @@ source ~/.macbootstrap/zsh/alias.sh
 source ~/.macbootstrap/mac/change_ctrl_caps.sh
 
 bindkey -v
+export EDITOR=vim
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -62,3 +63,5 @@ neofetch
 
 # scmpuff git 插件
 eval "$(scmpuff init -s)"
+
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"

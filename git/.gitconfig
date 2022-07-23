@@ -27,9 +27,9 @@
 [diff "plist"]
     textconv = plutil -convert xml1 -o -
 [user]
-	email = email
-	name = name
-	signingkey = signingkey
+	email = throughskybrim@gmail.com
+	name = wiley
+	# signingkey = signingkey
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
