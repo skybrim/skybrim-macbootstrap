@@ -9,7 +9,7 @@ ZSH_DISABLE_COMPFIX=true
 
 export LANG=en_US.UTF-8
 export ZSH=$HOME/.oh-my-zsh
-plugins=(git extract encode64 urltools brew zsh-syntax-highlighting zsh-autosuggestions safe-paste vi-mode)
+plugins=(git gitignore git-open z colored-man-pages extract encode64 urltools brew zsh-syntax-highlighting zsh-autosuggestions safe-paste vi-mode)
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
 
