@@ -24,6 +24,7 @@ export EDITOR=vim
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_AUTO_UPDATE=true
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+export HOMEBREW_GITHUB_API_TOKEN="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"
 
 # coreutils
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -38,20 +39,9 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# pyenv
+export PATH=$HOME/.pyenv/bin:$PATH
+eval "$(pyenv init -)"
 
 neofetch
 
