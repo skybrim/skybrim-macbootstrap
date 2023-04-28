@@ -24,7 +24,7 @@ export EDITOR=vim
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_AUTO_UPDATE=true
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-export HOMEBREW_GITHUB_API_TOKEN="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"
+export HOMEBREW_GITHUB_API_TOKEN=""
 
 # coreutils
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
