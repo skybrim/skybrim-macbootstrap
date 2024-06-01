@@ -53,3 +53,4 @@ neofetch
 eval "$(scmpuff init -s)"
 
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"

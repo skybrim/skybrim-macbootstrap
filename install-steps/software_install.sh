@@ -4,7 +4,7 @@ source ~/.macbootstrap/install_func.sh
 
 common_software="iterm2 firefox notion alfred sogouinput the-unarchiver mos"
 source_control_software="fork" # xversion
-ide_software="visual-studio-code dash tableplus"
+ide_software="visual-studio-code dash tableplus swiftformat-for-xcode"
 
 brew_c $common_software
 brew_c $ide_software
