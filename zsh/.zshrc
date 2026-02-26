@@ -13,6 +13,9 @@ plugins=(git gitignore git-open z colored-man-pages extract encode64 urltools br
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 source ~/.macbootstrap/zsh/func.sh
 source ~/.macbootstrap/zsh/alias.sh
 source ~/.macbootstrap/mac/change_ctrl_caps.sh
@@ -27,6 +30,9 @@ export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
 export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+
+# xcode
+export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
 
 # coreutils
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -46,10 +52,6 @@ export PATH=$HOME/.pyenv/bin:$PATH
 eval "$(pyenv init -)"
 
 neofetch
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # scmpuff git 插件
 eval "$(scmpuff init -s)"
