@@ -2,9 +2,9 @@
 
 source ~/.macbootstrap/install_func.sh
 
-common_software="iterm2 firefox notion alfred sogouinput the-unarchiver mos"
+common_software="iterm2 google-chrome alfred the-unarchiver mos"
 source_control_software="fork" # xversion
-ide_software="visual-studio-code dash tableplus swiftformat-for-xcode"
+ide_software="visual-studio-code tableplus"
 
 brew_c $common_software
 brew_c $ide_software

@@ -9,8 +9,8 @@ sh ~/.macbootstrap/zsh/zsh_config.sh
 brew update
 
 # install v2ray
-brew tap v2ray/v2ray
-brew install v2ray-core
+# brew tap v2ray/v2ray
+# brew install v2ray-core
 # 关联 v2ray 配置文件
 # ln -s ~/.macbootstrap/proxy/config.json /usr/local/etc/v2ray-core/config.json
 # 关联本地 pac 文件
@@ -37,8 +37,8 @@ sh ~/.macbootstrap/git/git_config.sh
 echo_blue 'ruby config run'
 sh ~/.macbootstrap/ruby/ruby_config.sh
 
-# echo_blue 'python config run'
-# sh ~/.macbootstrap/python/python_install.sh
+echo_blue 'python config run'
+sh ~/.macbootstrap/python/python_install.sh
 
 echo_blue 'web config run'
 sh ~/.macbootstrap/web/web_config.sh
@@ -47,5 +47,5 @@ echo_blue 'mac confgi run'
 sh ~/.macbootstrap/mac/mac_config.sh
 
 # 开机自动执行脚本
-echo_blue 'hook login'
-sh ~/.macbootstrap/mac/hook_login.sh
+# echo_blue 'hook login'
+# sh ~/.macbootstrap/mac/hook_login.sh

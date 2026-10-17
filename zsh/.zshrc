@@ -9,9 +9,6 @@ export ZSH=$HOME/.oh-my-zsh
 plugins=(git gitignore git-open z colored-man-pages extract encode64 urltools brew zsh-syntax-highlighting zsh-autosuggestions safe-paste vi-mode)
 source $ZSH/oh-my-zsh.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 source ~/.macbootstrap/zsh/func.sh
 source ~/.macbootstrap/zsh/alias.sh
 source ~/.macbootstrap/mac/change_ctrl_caps.sh
@@ -31,8 +28,9 @@ export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
 
 # coreutils
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
+export MANPATH=/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH
+export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -47,12 +45,12 @@ eval "$(rbenv init -)"
 export PATH=$HOME/.pyenv/bin:$PATH
 eval "$(pyenv init -)"
 
-neofetch
+fastfetch
 
 # scmpuff git 插件
 eval "$(scmpuff init -s)"
 
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+#export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+
 
 export TERM=xterm-256color

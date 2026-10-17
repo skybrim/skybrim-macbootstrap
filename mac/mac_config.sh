@@ -79,7 +79,7 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Disable app verifying
-sudo spctl --master-disable
+# sudo spctl --global-disable
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Disable auto correct
