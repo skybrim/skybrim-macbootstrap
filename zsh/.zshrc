@@ -50,7 +50,23 @@ fastfetch
 # scmpuff git 插件
 eval "$(scmpuff init -s)"
 
+# scmpuff 依赖导出变量 SCMPUFF_GIT_CMD 指向真实 git；该变量在非交互 shell（脚本、
+# ZCode 等工具）里可能不随函数一起继承，丢失后函数会执行空命令报 permission denied。
+# 这里用自愈版包装覆盖：变量在则行为不变，变量丢则调用时现场解析。
+function git() {
+  local g="${SCMPUFF_GIT_CMD:-$(whence -p git)}"
+  case $1 in
+    (commit|blame|log|rebase|merge) scmpuff exec -- "$g" "$@" ;;
+    (checkout|diff|rm|reset|restore) scmpuff exec --relative -- "$g" "$@" ;;
+    (add) scmpuff exec -- "$g" "$@"
+      scmpuff_status ;;
+    (*) "$g" "$@" ;;
+  esac
+}
+
 #export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 
 
 export TERM=xterm-256color
+# 飞书推送脚本（集中放在 ~/develop/feishu-bot/）
+export PATH="$HOME/develop/feishu-bot:$PATH"
